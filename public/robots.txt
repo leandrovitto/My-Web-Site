@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://leandrovitto.com
+
+# Sitemaps
+Sitemap: https://leandrovitto.com/sitemap.xml

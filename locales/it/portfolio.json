@@ -1,0 +1,12 @@
+{
+    "title": "Portfolio",
+    "projects" : {
+        "title" : "Projects",
+        "description" : "I miei progetti sono..."
+    },
+    "portfolio" : {
+        "title" : "Portfolio",
+        "subtitle" : "Explore my Code",
+        "description" : "Ecco un elenco dei miei principali progetti open source che possiedo e a cui contribuisco."
+    }
+}

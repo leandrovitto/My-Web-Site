@@ -1,0 +1,69 @@
+{
+    "title": "About",
+    "experience" : {
+      "title" : "Experience",
+      "content" : [
+        {
+          "date" : "2019 to 2023",
+          "title" : "Front-end Engineer, Webscience srl, Milano",
+          "description" : "- Ho implementato una libreria comune React JS in un architettura Micro Frontend (Piral Js).<br>- Ho fatto da mentore a 3 nuovi sviluppatori front-end junior nel team per ampliare le competenze di JavaScript e React.<br>- Ho lavorato in un ambiente agile con stand-up settimanali, ho tenuto traccia delle storie utente/bug nei progetti Jira e condotto 2 ore di sprint planning e sprint retrospective a settimana."
+        },
+        {
+          "date" : "2016 to 2019",
+          "title" : "Fullstack Developer, Webscience srl, Milano",
+          "description" : "- Ho lavorato bene sia in modo indipendente che in gruppo per risolvere i problemi.<br>- Ho svolto con entusiasmo compiti che non rientravano nella mia descrizione del lavoro."
+        },
+        {
+          "date" : "2015 to 2016",
+          "title" : "Software engineer, VidyaSoft srl, Lecce",
+          "description" : "Sviluppo e prototipazione di un'applicazione Android in grado di comunicare via BLE e Arduino, IOT:Arduino, interfaccia Ethernet per la comunicazione con un servizio web REST"
+        }
+      ]
+    },
+    "education" : {
+      "title" : "Education",
+      "content" : [
+        {
+          "date" : "2016",
+          "title" : "Master of Engineering (M.Eng.), Computer Engineering",
+          "source" : "Università degli Studi di Lecce",
+          "description" : ""
+        },
+        {
+          "date" : "2013",
+          "title" : "Ingegneria dell’Informazione DM.509 [2013]",
+          "source" : "Università degli Studi di Lecce",
+          "description" : ""
+        },
+        {
+          "date" : "2007",
+          "title" : "Perito Industriale capo-tecnico specializzazione Informatica",
+          "source" : "IISS E. Mattei",
+          "description" : ""
+        }
+      ]
+    },
+    "courses" : {
+      "title" : "Certifications and Courses",
+      "content" : [
+        {
+          "date" : "2020",
+          "title" : "Facebook Advanced - Advertising",
+          "source" : "Marketers",
+          "description" : "La pubblicità è una tattica di marketing che prevede il pagamento di uno spazio per promuovere un prodotto o un servizio."
+        },
+        {
+          "date" : "2018",
+          "title" : "Funnel Secrets",
+          "source" : "Marketers",
+          "description" : "Funnel marketing sono una serie di fasi che guidano i potenziali clienti attraverso il processo di acquisto."
+        },
+        {
+          "date" : "2013",
+          "title" : "CCNA Discovery: Networking for Home and Small Businesses",
+          "source" : "Centro Cultura Innovativa di Impresa",
+          "description" : ""
+        }
+      ]
+    }
+}

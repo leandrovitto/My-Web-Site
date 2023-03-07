@@ -1,0 +1,49 @@
+@tailwind base;
+
+@layer base {
+    h1 {
+      @apply text-2xl font-bold;
+    }
+    h2 {
+      @apply text-xl font-medium;
+    }
+    h3 {
+      @apply text-lg font-medium;
+    }
+    ul {
+      @apply list-disc ml-4;
+    }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+
+.animate-spin-10 {
+    animation-name: spin;
+    animation-duration: 10000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.animate-spin-15 {
+    animation-name: spin;
+    animation-duration: 15000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.animate-spin-20 {
+    animation-name: spin;
+    animation-duration: 20000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+

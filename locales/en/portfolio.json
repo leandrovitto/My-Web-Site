@@ -1,0 +1,12 @@
+{
+    "title": "Portfolio",
+    "projects" : {
+        "title" : "Projects",
+        "description" : "My Side projects are..."
+    },
+    "portfolio" : {
+        "title" : "Portfolio",
+        "subtitle" : "Explore my Code",
+        "description" : "Here is a list of my top open source projects that I own and contribute to."
+    }
+}
