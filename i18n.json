@@ -1,0 +1,10 @@
+{
+    "locales": ["en","it"],
+    "defaultLocale": "en",
+    "pages": {
+      "*": ["common", "seo"],
+      "/": ["home"],
+      "/about": ["about"],
+      "/portfolio": ["portfolio"]
+    }
+  }

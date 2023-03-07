@@ -1,0 +1,86 @@
+{
+    "title" : "Developer",
+    "personal_site" : "Personal Site",
+    "languages" : [
+      {
+        "code" : "en",
+        "name" : "English"
+      },
+      {
+        "code" : "it",
+        "name" : "Italian"
+      }
+    ],
+    "menu" : {
+      "home" : "Home",
+      "about" : "About",
+      "portfolio" : "Portfolio",
+      "isjeady" : "Isjeady"
+    },
+    "btn" : {
+      "download_cv" : "Download CV",
+      "more_about_me" : "More about me..."
+    },
+    "about-typewriter-base": "Io sono,",
+    "about-typewriter-content": [
+        "Ingegnere del software",
+         "Sviluppatore frontend con background backend",
+         "Uno sviluppatore dal 2015",
+         "Formatore entusiasta e relatore di Youtube (oltre 100 ore di contenuti, 3K Iscritti)",
+         "fondatore e creatore di una <b>piattaforma di e-learning</b> per diventare uno sviluppatore web",
+         "un bevitore di acqua di rubinetto",
+         "attualmente dipendente dallo Sport: running e fitness"
+    ],
+    "profile" : {
+      "hi" : "Ciao io sono Leandro 👋",
+      "name" : "Leandro",
+      "email" : "vitto.leandro@gmail.com",
+      "about_mini" : "Sono uno sviluppatore Frontend con background Backend dall'Italia. Mi piace crisolvere problemi reali con il codice e costruire nuovi prodotti. Lavoro principalmente come sviluppatore frontend utilizzando React, Next.js, Vue.Js e altri framework.",
+      "role" : "Software Engineer"
+    },
+    "isjeady" : {
+      "title"  : "Isjeady nasce nel 2017 dalla mia passione per l’informatica.",
+      "description"  : "Community di supporto e di condivisione di tematiche sullo sviluppo software in particolare Web Application creata per appassionati da uno sviluppatore.",
+      "title_B": "Diventa uno Sviluppatore Web Professionista",
+      "description_B": "Creazione di contenuti e risorse per incrementare la felicità degli sviluppatori e la loro produttività🚀."
+    },
+    "techskills" : {
+      "title" : "My tech skills",
+      "description" : "🎉 Watching 2023: Solid Js, Remix Js, Astro Js"
+    },
+    "manifest" : {
+      "title" : "Leandro's Manifest",
+      "content" : [
+        {
+          "title" : "Nessun singolo paradigma!",
+          "description" : "Non essere limitato da un singolo paradigma o da una serie ristretta di idee.<br><br>Le migliori pratiche di oggi si chiameranno anti-modelli domani.Ai tuoi utenti non interessa come hai costruito il prodotto, ma piuttosto cosa fa per migliorare la loro vita."
+        },
+        {
+          "title" : "Abbracciare la semplicità, ignorare Hype",
+          "description" : "<i>Ho grandi aspettative per il futuro, perché il passato è stato molto sopravvalutato</i> >> Sylvester Stallone<br><br>Non è mai facile navigare, ma chiediti sempre è questo lo strumento migliore per il lavoro ?.Solo perché Tool X ha un'interfaccia elegante ed è usato da Hipster App Inc non significa che dovresti usarlo.<br><br>Abbiamo la tendenza a sovra-ingegnerizzare tutto, bisogna combattere questa voglia."
+        },
+        {
+          "title" : "Terminalo!",
+          "description" : "<i>Non importa quanto lentamente vai finché non ti fermi.</i> >> Confucio<br><br>È difficile finire un prodotto, ma fatto è meglio che perfetto.<br>Puoi aspettarti molte battute d'arresto durante lo sviluppo di un'app, e i progressi sono fatti migliorando costantemente il tuo lavoro a piccoli passi.<br><br>Non posso esagerare sull'importanza di questo: ascolta i tuoi clienti."
+        },
+        {
+          "title" : "Meno codice, pensa di più!",
+          "description" : "Il software riguarda la risoluzione dei problemi per le persone.<br>Non rimanere intrappolato concentrandoti sugli aspetti tecnici di un progetto."
+        },
+        {
+          "title" : "Aria Aperta!",
+          "description" : "Fai una passeggiata fuori e pensa al quadro generale, all'utente finale, al marketing e alla community.<br><br>La forza bruta non è quasi mai una buona idea. Invece, prenditi una breve pausa e goditi la vita.Quando ti siederai di nuovo,potresti risolvere miracolosamente quel problema dove prima ci hai perso infinite ore."
+        }
+      ]
+    },
+    "error" : {
+      "404" : "Page not found",
+      "404_message" : "Siamo spiacenti, non siamo riusciti a trovare la pagina che stai cercando.",
+      "back_to_home" : "Torna alla home"
+    },
+    "footer" : {
+      "message" : "Oggi è il primo giorno del resto della vostra vita...",
+      "rights" : "Tutti i diritti sono riservati.",
+      "love" : "Costruito con 💖 by: Leandro"
+    }
+}

@@ -1,0 +1,87 @@
+{
+    "variable-example": "Using a variable {{count}}",
+    "title" : "Developer",
+    "personal_site" : "Personal Site",
+    "languages" : [
+      {
+        "code" : "en",
+        "name" : "English"
+      },
+      {
+        "code" : "it",
+        "name" : "Italian"
+      }
+    ],
+    "menu" : {
+      "home" : "Home",
+      "about" : "About",
+      "portfolio" : "Portfolio",
+      "isjeady" : "Isjeady"
+    },
+    "btn" : {
+      "download_cv" : "Download CV",
+      "more_about_me" : "More about me..."
+    },
+    "about-typewriter-base": "I'm ",
+    "about-typewriter-content": [
+        "Software Engineer",
+        "Frontend Developer with Backend background",
+        "A developer since 2015",
+        "Enthusiast Trainer and Youtube Speaker (100h+ Contents, 3K Subs)",
+        "founder and creator an <b>e-learning platform</b> to become a web developer",
+        "a drinker of tap water",
+        "currently addicted to Sport: running e fitness"
+    ],
+    "profile" : {
+      "hi" : "Hi, i'm Leandro 👋",
+      "name" : "Leandro",
+      "email" : "vitto.leandro@gmail.com",
+      "about_mini" : "I'm Frontend Developer with Backend background from Italy. I enjoy building products and solving real-life problems with code. I work primarily as a frontend developer using React, Next.js, Vue.Js and other frameworks. I also have a background in backend development in Laravel, Spring and Node.js.",
+      "role" : "Software Engineer"
+    },
+    "isjeady" : {
+      "title"  : "Isjeady nasce nel 2017 dalla mia passione per l’informatica.",
+      "description"  : "Community di supporto e di condivisione di tematiche sullo sviluppo software in particolare Web Application creata per appassionati da uno sviluppatore.",
+      "title_B": "Diventa uno Sviluppatore Web Professionista",
+      "description_B": "Creazione di contenuti e risorse per incrementare la felicità degli sviluppatori e la loro produttività🚀."
+    },
+    "techskills" : {
+      "title" : "My tech skills",
+      "description" : "🎉 Watching 2023: Solid Js, Remix Js, Astro Js"
+    },
+    "manifest" : {
+      "title" : "Leandro's Manifest",
+      "content" : [
+        {
+          "title" : "No single paradigm!",
+          "description" : "<i>Not to be limited by a single paradigm or a narrow set of ideas.</i><br><br>Today's best practices will be called anti-models tomorrow. Your users don't care how you built the product, but rather what it does to improve their lives."
+        },
+        {
+          "title" : "Embrace simplicity, ignore hype",
+          "description" : "<i>I have high expectations for the future, because the past was very overrated> > Sylvester Stallone</i><br><br>It's never easy to navigate, but always ask yourself is this the best tool for the job?.Just because Tool X has a sleek interface and is used by Hipster App Inc doesn't mean you should use it.<br><br>We have a tendency to over-engineer everything, you have to fight that urge."
+        },
+        {
+          "title" : "Done!",
+          "description" : "<i>It doesn't matter how slowly you go until you stop..> > Confucio</i><br><br>It is difficult to finish a product, but done is better than perfect.<br>You can expect many setbacks during the development of an app, and progress is made by constantly improving your work in small steps.<br><br>I cannot overstate the importance of this: listen to your customers."
+        },
+        {
+          "title" : "Less code, think more!",
+          "description" : "Software is about solving problems for people.<br>Don't get trapped by focusing on the technical aspects of a project."
+        },
+        {
+          "title" : "Open Air!",
+          "description" : "Take a walk outside and think about the big picture, the end user, marketing and the community.<br><br>Brute force is almost never a good idea. Instead, take a short break and enjoy life.<br><br>When you sit down again, you may miraculously solve that problem where you previously wasted countless hours."
+        }
+      ]
+    },
+    "error" : {
+      "404" : "Page not found",
+      "404_message" : "Sorry, we couldn’t find the page you’re looking for.",
+      "back_to_home" : "Back to home"
+    },
+    "footer" : {
+      "message" : "Today is the first day of the rest of your life...",
+      "rights" : "2023 All rights reserved.",
+      "love" : "Builth with 💖 by: Leandro"
+    }
+}

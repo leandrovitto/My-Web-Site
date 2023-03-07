@@ -1,0 +1,30 @@
+{
+  "base_url": "https://www.leandrovitto.com",
+  "image" : "https://lms-isjeady.s3.amazonaws.com/frontend/content/desk.jpg",
+  "author" : "leandro",
+  "link_cv": "https://drive.google.com/file/d/12Af-Arb66B5FFbBZkqcGuPGso67I7QGn/view?usp=sharing",
+  "site_keywords": ["Next.js", "Netlify","React"],
+  "twitter_account": "@lifLeANDRO",
+  "social": [
+    {
+        "name": "linkedin",
+        "link": "https://linkedin.com/in/leandrovitto"
+    },
+    {
+      "name": "github",
+        "link": "https://github.com/leandrovitto"
+    },
+    {
+      "name": "youtube",
+        "link": "https://www.youtube.com/isjeady"
+    },
+    {
+      "name": "instagram",
+        "link": "https://www.instagram.com/lifleandro"
+    },
+    {
+      "name": "medium",
+        "link": "https://medium.com/@vitto.leandro"
+    }
+  ]
+}
