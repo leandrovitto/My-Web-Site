@@ -158,7 +158,7 @@ const SolarSystem: FunctionComponent<Props> = ({ animate = true }: Props): React
     }
     const classIcon = "absolute -top-5 left-[50%] translate-x-[-50%] h-6 w-6 md:h-8 md:w-8 bg-white dark:bg-gray-900";
 
-    return <div className="flex-1 relative aspect-square w-full p-4">
+    return <div className="flex-1 relative aspect-square w-full p-6 overflow-hidden">
         <div className="w-full aspect-square relative">
             <Galaxy />
 
