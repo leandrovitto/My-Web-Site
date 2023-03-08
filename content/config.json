@@ -2,7 +2,8 @@
   "base_url": "https://www.leandrovitto.com",
   "image" : "https://lms-isjeady.s3.amazonaws.com/frontend/content/desk.jpg",
   "author" : "leandro",
-  "link_cv": "https://drive.google.com/file/d/12Af-Arb66B5FFbBZkqcGuPGso67I7QGn/view?usp=sharing",
+  "link_cv_en": "https://drive.google.com/file/d/12fXcoQrYhvlk7SvXZERwezQDU7V7bGUW/view?usp=sharing",
+  "link_cv_it": "https://drive.google.com/file/d/12jTi-jV4KAtCw3huNB4qYM4okBstpD9y/view?usp=share_link",
   "site_keywords": ["Next.js", "Netlify","React"],
   "twitter_account": "@lifLeANDRO",
   "social": [
