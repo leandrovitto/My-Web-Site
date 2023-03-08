@@ -44,7 +44,8 @@ export type Config = {
     readonly image: string;
     readonly author: string;
     readonly twitter_account: string;
-    readonly link_cv: string;
+    readonly link_cv_en: string;
+    readonly link_cv_it: string;
     readonly site_keywords: string[];
     readonly social: Social;
 };

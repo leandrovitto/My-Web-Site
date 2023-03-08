@@ -9,6 +9,7 @@ import Title from '../../atoms/Title';
 import Icon from '../../atoms/icon/Icon';
 import AboutTypewriter from '@/components/layouts/AboutTypewriter';
 import { VisitedContext } from '@/context/visited/visited.context';
+import { Lang } from '@/@types';
 
 type Props = {}
 
@@ -21,19 +22,27 @@ const Details: FunctionComponent<Props> = ({ }: Props): ReactElement => {
 
     const DownloadCVButton = () => {
         const downloadCV = () => {
-            window.open(config.link_cv, "_blank", "noreferrer");
+            let link = "";
+            if (lang == Lang.IT) {
+                link = config.link_cv_it
+            } else {
+                link = config.link_cv_en
+            }
+            window.open(link, "_blank", "noreferrer");
         }
 
-        return <Button className='my-2' onClick={downloadCV} icon="pdf">
-            <p>{t("btn.download_cv")}</p>
-        </Button>
+        return <>
+            <Button className='my-2' onClick={downloadCV} icon="pdf">
+                <p>{t("btn.download_cv") + ` - ` + lang.toLocaleUpperCase()}</p>
+            </Button>
+        </>
     }
 
     const DetailSection = () => {
         return <div className="max-w-md">
             <Title title={t("profile.name")} subtitle={thome(visited ? "welcome_back" : "welcome")} size='md'>
                 <div>
-                 
+
                     <div className="font-mono text-sm font-bold text-gray-500 dark:text-gray-300">
                         <AboutTypewriter />
                     </div>

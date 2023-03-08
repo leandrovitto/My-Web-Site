@@ -52,7 +52,7 @@ const CardItem: FunctionComponent<CardItemProps> = ({ big = false, item }: CardI
     const Linked = ({ item, children }: { item: ProjectContent | TechskillContent, children: ReactNode }) => {
         const hasLink = ((item as ProjectContent)?.href && (item as ProjectContent).href != linkNone) ?? false;
 
-        return hasLink ? <Link href={(item as ProjectContent).href} target='_blank' className='hover:ring-2 hover:rounded-2xl md:mr-4' as="div">
+        return hasLink ? <Link href={(item as ProjectContent).href} target='_blank' className='hover:ring-2 hover:rounded-2xl md:mr-4' >
             {children}
         </Link> :
             <div className='md:mr-4'>{children}</div>
