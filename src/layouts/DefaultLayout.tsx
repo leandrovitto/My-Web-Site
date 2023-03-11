@@ -15,7 +15,7 @@ const DefaultLayout: FunctionComponent<DefaultLayoutProps> = ({ children, image 
         <main className="font-sans subpixel-antialiased">
             <div className='relative h-screen overflow-auto ring -my-px'>
 
-                <div className="sticky top-0 z-40 backdrop-blur-sm border-b border-gray-900/10 md:mx-8">
+                <div className="sticky top-0 z-10 backdrop-blur-sm border-b border-gray-900/10 md:mx-8">
                     <Navbar />
                 </div>
 

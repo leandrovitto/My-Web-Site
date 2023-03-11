@@ -9,6 +9,7 @@ import { FunctionComponent, ReactElement, ReactNode } from 'react';
 import BtnIcon from '../icon/BtnIcon';
 import Icon from '../icon/Icon';
 import IconStack from '../icon/IconStack';
+import ImageViewer from '@/components/MDX/ImageViewer';
 
 type CardItemProps = {
     big?: boolean,
@@ -58,6 +59,24 @@ const CardItem: FunctionComponent<CardItemProps> = ({ big = false, item }: CardI
             <div className='md:mr-4'>{children}</div>
     }
 
+    const getNameFile = (url: string): string => {
+        try {
+            if (url) {
+                let split = url.split('/').pop();
+                if (split) {
+                    split = split.split('.').shift();
+                    if (split) {
+                        split = split.replace("_", " ");
+                        return url && split ? split : ""
+                    }
+                }
+            }
+            throw "";
+        } catch (error) {
+            return "";
+        }
+    }
+
     return <li className="col-span-1 divide-y border border-gray-300 dark:border-gray-700 divide-gray-200 dark:divide-gray-700 rounded-lg shadow-sm hover:bg-indigo-50 dark:hover:bg-gray-900">
 
         <div className="flex flex-col md:flex-row md:items-center md:justify-between p-4">
@@ -96,6 +115,10 @@ const CardItem: FunctionComponent<CardItemProps> = ({ big = false, item }: CardI
                 {(item as TechskillContent).skills && <ul className='list-disc ml-6 mt-1 text-sm text-gray-500 dark:text-gray-200 font-semibold'>
                     {(item as TechskillContent).skills.map((s, idx) => <li key={idx}>{s}</li>)}
                 </ul>}
+
+                {(item as ProjectContent).gallery && <div className="mt-2 inline-flex gap-2">
+                    {(item as ProjectContent).gallery.map((g, idx) => <ImageViewer img={g} alt={getNameFile(g)} />)}
+                </div>}
 
                 {(item as ProjectContent).stack && <div className="mt-2">
                     <IconStack stack={(item as ProjectContent).stack} />
