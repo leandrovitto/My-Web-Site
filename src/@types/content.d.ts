@@ -24,6 +24,7 @@ export type ProjectContent = {
     readonly author: string;
     readonly portfolio: boolean;
     readonly stack: string[];
+    readonly gallery: string[];
     content: string;
     source: MDXRemoteSerializeResult;
 };

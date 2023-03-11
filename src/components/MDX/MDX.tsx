@@ -5,9 +5,10 @@ import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 //Components
 import Code from './Code';
 import Icon from '../atoms/icon/Icon';
+import ImageViewer from './ImageViewer';
 import LinkIcon from '../atoms/icon/LinkIcon';
 
-const components = { Code, Icon, LinkIcon };
+const components = { Code, Icon, LinkIcon, ImageViewer };
 
 type Props = {
     source: MDXRemoteSerializeResult;
