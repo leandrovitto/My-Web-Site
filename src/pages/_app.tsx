@@ -4,6 +4,7 @@ import '@/styles/globals.css'
 import 'react-tooltip/dist/react-tooltip.css'
 import { AnimatePresence } from "framer-motion";
 import { VisitedProvider } from '@/context/visited/visited.context';
+import packageJson from '../../package.json';
 
 export default function App({ Component, pageProps }: AppProps) {
   return <ThemeProvider enableSystem={true} attribute="class">
@@ -11,6 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <VisitedProvider>
         <Component {...pageProps} />
       </VisitedProvider>
+      <div className="fixed bottom-0 left-2 text-xs font-bold">v.{packageJson?.version}</div>
     </AnimatePresence>
   </ThemeProvider>
 }
