@@ -19,6 +19,7 @@ import { SiNuxtDotJs } from "@react-icons/all-files/si/SiNuxtDotJs";
 import { SiReact } from "@react-icons/all-files/si/SiReact";
 import { SiTailwindcss } from "@react-icons/all-files/si/SiTailwindcss";
 import { SiTypescript } from "@react-icons/all-files/si/SiTypescript";
+import { SiPrismic } from "@react-icons/all-files/si/SiPrismic";
 import { SiVisualstudiocode } from "@react-icons/all-files/si/SiVisualstudiocode";
 
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
@@ -93,6 +94,12 @@ const Icon: FunctionComponent<IconProps> = ({
             case "bar_chart":
                 return {
                     component: <BsFillBarChartFill className={classes} />,
+                    tooltip: "",
+                }
+                break;
+            case "prisma":
+                return {
+                    component: <SiPrismic className={classes} />,
                     tooltip: "",
                 }
                 break;

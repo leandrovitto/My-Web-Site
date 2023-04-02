@@ -22,8 +22,8 @@ export default function Home({ projects, portfolio }: Props) {
     <>
       <Meta title={t("title")} url={Routes.portfolio} />
       <DefaultLayout>
-        <Projects projects={projects} />
         <Portfolio portfolio={portfolio} />
+        <Projects projects={projects} />
         <WakaTime />
       </DefaultLayout>
     </>

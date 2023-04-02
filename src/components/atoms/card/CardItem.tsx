@@ -77,7 +77,10 @@ const CardItem: FunctionComponent<CardItemProps> = ({ big = false, item }: CardI
         }
     }
 
-    return <li className="col-span-1 divide-y border border-gray-300 dark:border-gray-700 divide-gray-200 dark:divide-gray-700 rounded-lg shadow-sm hover:bg-indigo-50 dark:hover:bg-gray-900">
+    return <li
+        className="flex flex-col justify-between divide-y border border-gray-300 dark:border-gray-700
+     divide-gray-200 dark:divide-gray-700 rounded-lg shadow-sm hover:bg-indigo-50 dark:hover:bg-gray-900
+     ">
 
         <div className="flex flex-col md:flex-row md:items-center md:justify-between p-4">
             <Linked item={item}>
@@ -128,7 +131,7 @@ const CardItem: FunctionComponent<CardItemProps> = ({ big = false, item }: CardI
 
 
         {(item as ProjectContent).author && (item as ProjectContent).href &&
-            <div className="-mt-px flex mx-auto divide-x divide-gray-200 dark:divide-gray-700 ">
+            <div className="flex">
                 <div className='w-5/6 flex justify-start px-4 my-2'>
                     <Author author={getAuthor(lang, (item as ProjectContent).author)} />
                 </div>
