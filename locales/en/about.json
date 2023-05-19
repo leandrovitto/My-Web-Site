@@ -24,12 +24,6 @@
     "title": "Education",
     "content": [
       {
-        "date": "2023",
-        "title": "React Global Online Summit 2023",
-        "source": "Geekle.us",
-        "description": "React Global Online Summit, server components, typescript and many more..."
-      },
-      {
         "date": "2016",
         "title": "Master of Engineering (M.Eng.), Computer Engineering",
         "source": "University of Lecce",
@@ -52,6 +46,12 @@
   "courses": {
     "title": "Certifications and Courses",
     "content": [
+      {
+        "date": "2023",
+        "title": "React Global Online Summit 2023",
+        "source": "Geekle.us",
+        "description": "React Global Online Summit, server components, typescript and many more..."
+      },
       {
         "date": "2020",
         "title": "Facebook Advanced - Advertising",
