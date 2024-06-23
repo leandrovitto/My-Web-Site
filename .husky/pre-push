@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+branch="$(git rev-parse --abbrev-ref HEAD)"
+
+if [ "$branch" = "develop" ]; then
+	echo "Push STAGING"
+    npm run build
+    #vercel
+fi

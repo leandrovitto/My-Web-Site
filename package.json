@@ -11,7 +11,8 @@
     "clean": "rimraf dist .next node_modules",
     "analyze": "ANALYZE=true next build",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "prepare": "husky"
   },
   "dependencies": {
     "@headlessui/react": "^2.1.0",
@@ -44,6 +45,7 @@
     "@types/js-yaml": "^4.0.9",
     "autoprefixer": "^10.4.19",
     "cypress": "^13.12.0",
+    "husky": "^9.0.11",
     "netlify-plugin-cypress": "^2.2.1",
     "next-translate-plugin": "^2.6.2",
     "postcss": "^8.4.38",
