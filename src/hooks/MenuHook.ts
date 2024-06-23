@@ -31,8 +31,8 @@ const useMenuHook = (): [
             icon: "box_circles"
         },
         /* {
-            name: t("menu.isjeady"),
-            href: 'https://www.isjeady.com',
+            name: t("menu."),
+            href: '',
             icon: Squares2X2Icon,
             external: true
         } */

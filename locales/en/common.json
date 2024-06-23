@@ -15,8 +15,7 @@
     "menu" : {
       "home" : "Home",
       "about" : "About",
-      "portfolio" : "Portfolio",
-      "isjeady" : "Isjeady"
+      "portfolio" : "Portfolio"
     },
     "btn" : {
       "download_cv" : "Download CV",
