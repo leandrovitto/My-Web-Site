@@ -4,6 +4,11 @@
     "title": "Esperienza",
     "content": [
       {
+        "date": "2024 to now",
+        "title": "Senior Software Engineer, Adesso.it, Milano",
+        "description": "⦿ Actively contributed to the initial adoption and implementation of the React JS library within a Micro Frontend Architecture using Piral JS.<br>⦿ Mentored junior front-end developers, helping them enhance their skills in JavaScript and React. <br>⦿ Operated in an agile environment, weekly stand-ups, managing user stories and bugs via Jira, and conducting sprint planning and retrospectives for two hours each week. <br>⦿ Conducted end-to-end testing with Playwright. <br>⦿ Managed pipelines with Bitbucket and configured Kubernetes for frontend services."
+      },
+      {
         "date": "2019 to 2023",
         "title": "Front-end Engineer, Webscience srl, Milano",
         "description": "- Ho implementato una libreria comune React JS in un architettura Micro Frontend (Piral Js).<br>- Ho fatto da mentore a 3 nuovi sviluppatori front-end junior nel team per ampliare le competenze di JavaScript e React.<br>- Ho lavorato in un ambiente agile con stand-up settimanali, ho tenuto traccia delle storie utente/bug nei progetti Jira e condotto 2 ore di sprint planning e sprint retrospective a settimana."
