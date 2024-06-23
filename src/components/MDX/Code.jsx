@@ -1,10 +1,4 @@
-import Prism from "prism-react-renderer/prism";
-import Highlight, { defaultProps } from "prism-react-renderer";
-import shadesOfPurple from "prism-react-renderer/themes/shadesOfPurple";
-
-(typeof global !== "undefined" ? global : window).Prism = Prism;
-
-require("prismjs/components/prism-php"); // Add PHP support
+import { Highlight, themes } from "prism-react-renderer";
 
 export default function Code(props) {
     const { children, lang = "jsx" } = props;
@@ -13,10 +7,9 @@ export default function Code(props) {
 
     return (
         <Highlight
-            {...defaultProps}
             code={exampleCode}
             language={lang}
-            theme={shadesOfPurple}
+            theme={themes.dracula}
         >
             {({ className, style, tokens, getLineProps, getTokenProps }) => (
                 <pre className={"text-sm p-4 rounded-md"} style={style}>
