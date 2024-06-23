@@ -36,7 +36,7 @@ export function getAllProjects(lang = ""): ProjectContent[] {
   const projects = slugs
     .filter((it) => it.endsWith(".mdx"))
     .map((slug) => getProjectsBySlug(slug, lang))
-    .sort((projects1, projects2) => (projects1.date < projects2.date ? -1 : 1));
+    .sort((projects1, projects2) => (projects1.date > projects2.date ? -1 : 1));
   return projects;
 }
 

@@ -229,10 +229,10 @@ const Icon: FunctionComponent<IconProps> = ({
                     tooltip: "Visual Studio Code",
                 }
                 break;
-            case "Nuxt Js":
+            case "nuxtjs":
                 return {
                     component: <SiNuxtDotJs className={classes} />,
-                    tooltip: "Nuxt Js",
+                    tooltip: "nuxtjs",
                 }
                 break;
             case "vuejs":
@@ -299,6 +299,12 @@ const Icon: FunctionComponent<IconProps> = ({
                 return {
                     component: <SiReact className={classes} />,
                     tooltip: "React Js",
+                }
+                break;
+            case "html":
+                return {
+                    component: <SiHtml5 className={classes} />,
+                    tooltip: "Redux",
                 }
                 break;
             default:
