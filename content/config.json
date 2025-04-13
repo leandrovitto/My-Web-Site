@@ -2,11 +2,15 @@
   "base_url": "https://www.leandrovitto.com",
   "image" : "https://lms-isjeady.s3.amazonaws.com/frontend/content/desk.jpg",
   "author" : "leandro",
-  "link_cv_en": "https://drive.google.com/file/d/12fXcoQrYhvlk7SvXZERwezQDU7V7bGUW/view?usp=sharing",
-  "link_cv_it": "https://drive.google.com/file/d/12jTi-jV4KAtCw3huNB4qYM4okBstpD9y/view?usp=share_link",
-  "site_keywords": ["Next.js", "Netlify","React"],
+  "link_cv_en": "https://drive.google.com/file/d/1Qv0ra99AWargq5nGtnx0BCu-18s9Wu4s/view?usp=share_link",
+  "link_cv_it": "https://drive.google.com/file/d/1z6EX5SFyTIc1IsNBj8-qdyW5haWgEB-d/view?usp=share_link",
+  "site_keywords": ["Next.js", "Netlify","React","nodejs"],
   "twitter_account": "@lifLeANDRO",
   "social": [
+    {
+        "name": "link",
+        "link": "https://linktr.ee/leandro.dev"
+    },
     {
         "name": "linkedin",
         "link": "https://linkedin.com/in/leandrovitto"
@@ -18,10 +22,6 @@
     {
       "name": "youtube",
         "link": "https://www.youtube.com/@codewavedev_"
-    },
-    {
-      "name": "instagram",
-        "link": "https://www.instagram.com/lifleandro"
     },
     {
       "name": "medium",

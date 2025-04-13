@@ -22,8 +22,7 @@
     },
     "about-typewriter-base": "Io sono,",
     "about-typewriter-content": [
-        "Ingegnere del software",
-         "Sviluppatore frontend con background backend",
+         "Senior Software Engineer | Frontend Specialist",
          "Uno sviluppatore dal 2015",
          "Formatore entusiasta e relatore di Youtube (oltre 100 ore di contenuti, 3K Iscritti)",
          "fondatore e creatore di una <b>piattaforma di e-learning</b> per diventare uno sviluppatore web",
@@ -34,7 +33,7 @@
       "hi" : "Ciao io sono Leandro 👋",
       "name" : "Leandro",
       "email" : "vitto.leandro@gmail.com",
-      "about_mini" : "Sono uno sviluppatore Frontend con background Backend. Mi piace risolvere problemi reali con il codice e costruire nuovi prodotti. Lavoro principalmente come sviluppatore frontend utilizzando React, Next.js, Vue.Js e altri framework.",
+      "about_mini" : "Senior Software Engineer con focus sul frontend e solide competenze fullstack.Ho esperienza concreta nello sviluppo di applicazioni web complete, dalla progettazione dell’interfaccia utente all’implementazione del backend e della pipeline DevOps.<br><br>   Dal 2017 porto avanti progetti B2B/B2C, affianco team junior e condivido la mia esperienza tramite contenuti e-learning (codewave.dev | 100+ ore, 4K+ iscritti).<br><br>  Cerco di restare sempre aggiornato sul mondo Tech.",
       "role" : "Software Engineer"
     },
     "isjeady" : {
@@ -45,7 +44,7 @@
     },
     "techskills" : {
       "title" : "Le mie skills tech",
-      "description" : "🎉 Watching 2024: Microfrontend, K8S Frontend Architectures, Langchain Js"
+      "description" : "🎉 Watching 2025: Microfrontend, RAG, Vector DB, AI Tools, Langchain Js"
     },
     "manifest" : {
       "title" : "Leandro's Manifest",

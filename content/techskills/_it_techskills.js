@@ -16,20 +16,10 @@ const techSkills = [
         icon: 'nextjs',
         skills: [
             "Architectures: Single SPA, Module Federation Webpack 5",
-            "Piral Js e Piral CLI",
+            "Vite Module Federation/ Events Bus,Piral Js e Piral CLI",
             "Integration Via Artifact",
             "NPM Private Registry Nexus / Verdaccio",
-            "Lerna Js / Turbo Js",
-            "Monorepository"
-        ]
-    },
-    {
-        title: 'Test e2e',
-        icon: 'javascript',
-        skills: [
-            "Playwright Js / Cypress Js",
-            "Cucumber Js / Gerkin",
-            "Jest Js",
+            "Monorepository:Lerna Js / Turbo Js",
         ]
     },
     {
@@ -42,6 +32,25 @@ const techSkills = [
             "Pipeline Bitbucket, Semaphore CI",
             "Heroku, Digital Ocean,Google Cloud, Amazon AWS, Azure (Basic Structure)",
             "Kubernetes (Basic Structure)",
+        ]
+    },
+    {
+        title: 'AI (learn in progress)',
+        icon: 'ai',
+        skills: [
+            "RAG, Vector DB, Langchain",
+            "APIs OpenAI, Chatbots, LLMs",
+            "Finetuning, Prompt Engineering",
+            "n8n (Automation)",
+        ]
+    },
+    {
+        title: 'Test e2e',
+        icon: 'javascript',
+        skills: [
+            "Playwright Js / Cypress Js",
+            "Cucumber Js / Gerkin",
+            "Jest Js",
         ]
     },
     {

@@ -23,8 +23,7 @@
     },
     "about-typewriter-base": "I'm ",
     "about-typewriter-content": [
-        "Software Engineer",
-        "Frontend Developer with Backend background",
+        "Senior Software Engineer | Frontend Specialist",
         "A developer since 2015",
         "Enthusiast Trainer and Youtube Speaker (100h+ Contents, 3K Subs)",
         "founder and creator an <b>e-learning platform</b> to become a web developer",
@@ -46,7 +45,7 @@
     },
     "techskills" : {
       "title" : "My tech skills",
-      "description" : "🎉 Watching 2024: Microfrontend, K8S Frontend Architectures, Langchain Js"
+      "description" : "🎉 Watching 2025: Microfrontend, RAG, Vector DB, AI Tools, Langchain Js"
     },
     "manifest" : {
       "title" : "Leandro's Manifest",
