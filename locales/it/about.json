@@ -4,24 +4,29 @@
     "title": "Esperienza",
     "content": [
       {
-        "date": "2024 to now",
-        "title": "Senior Software Engineer, Adesso.it, Milano",
-        "description": "⦿ Actively contributed to the initial adoption and implementation of the React JS library within a Micro Frontend Architecture using Piral JS.<br>⦿ Mentored junior front-end developers, helping them enhance their skills in JavaScript and React. <br>⦿ Operated in an agile environment, weekly stand-ups, managing user stories and bugs via Jira, and conducting sprint planning and retrospectives for two hours each week. <br>⦿ Conducted end-to-end testing with Playwright. <br>⦿ Managed pipelines with Bitbucket and configured Kubernetes for frontend services."
+        "date": "Gen 2024 – Presente",
+        "title": "Senior Frontend Architect / Technical Lead, Adesso S.p.A.",
+        "description": "⦿ Introdotta architettura micro-frontend (Piral.js) che ha abilitato rilasci indipendenti per team multipli, riducendo il coupling e accelerando la delivery su progetti enterprise.<br>⦿ Progettato workspace di stima AI-assisted (Claude API + PERT) che ha standardizzato il processo di estimation del team.<br>⦿ Mentoring sviluppatori junior/mid con crescita autonomia in delivery.<br>⦿ Introdotto testing E2E con Playwright portando copertura da zero su flussi critici.<br>⦿ CI/CD e Kubernetes configurati per garantire deploy affidabili e rollback controllati."
       },
       {
-        "date": "2019 to 2023",
-        "title": "Front-end Engineer, Webscience srl, Milano",
-        "description": "- Ho implementato una libreria comune React JS in un architettura Micro Frontend (Piral Js).<br>- Ho fatto da mentore a 3 nuovi sviluppatori front-end junior nel team per ampliare le competenze di JavaScript e React.<br>- Ho lavorato in un ambiente agile con stand-up settimanali, ho tenuto traccia delle storie utente/bug nei progetti Jira e condotto 2 ore di sprint planning e sprint retrospective a settimana."
+        "date": "Lug 2018 – Dic 2019",
+        "title": "Full Stack Engineer, Cloud R",
+        "description": "⦿ Sviluppato applicazioni fullstack (Vue.js + Laravel + PostgreSQL) su infrastruttura AWS/GCP, contribuendo alla stabilità e scalabilità di prodotti B2B in produzione.<br>⦿ Introdotto test automation con Cypress, riducendo i cicli di QA manuale e aumentando la confidenza nei rilasci in produzione."
       },
       {
-        "date": "2016 to 2019",
-        "title": "Fullstack Developer, Webscience srl, Milano",
-        "description": "- Ho lavorato bene sia in modo indipendente che in gruppo per risolvere i problemi.<br>- Ho svolto con entusiasmo compiti che non rientravano nella mia descrizione del lavoro."
+        "date": "2017 – 2023",
+        "title": "Software Engineer, Webscience S.R.L.",
+        "description": "⦿ Progettato e mantenuto REST API services (Java/Node.js) e frontend UI complessi per clienti B2B, garantendo continuità su progetti pluriennali.<br>⦿ Gestito team di sviluppo, definito architettura frontend e coordinato release in ambiente Agile.<br>⦿ Implementato libreria React JS comune in architettura Micro Frontend (Piral.js). Mentoring di sviluppatori junior su JavaScript e React."
       },
       {
-        "date": "2015 to 2016",
-        "title": "Software engineer, VidyaSoft srl, Lecce",
-        "description": "Sviluppo e prototipazione di un'applicazione Android in grado di comunicare via BLE e Arduino, IOT:Arduino, interfaccia Ethernet per la comunicazione con un servizio web REST"
+        "date": "2016 – 2017",
+        "title": "Software Engineer, VidyaSoft S.R.L.",
+        "description": "Prototipazione app Android BLE con Arduino e comunicazione REST. Sviluppo interfaccia Ethernet per comunicazione con servizi web REST."
+      },
+      {
+        "date": "2009 – 2011",
+        "title": "Co-founder & Software Developer, CMV Management",
+        "description": "Sviluppo siti aziendali, CRM custom, ottimizzazione CSS, gestione DB MySQL. Stack: PHP, Laravel, MySQL, Git."
       }
     ]
   },
@@ -29,20 +34,20 @@
     "title": "Educazione",
     "content": [
       {
-        "date": "2016",
-        "title": "Master of Engineering (M.Eng.), Computer Engineering",
-        "source": "Università degli Studi di Lecce",
+        "date": "2017",
+        "title": "Computer Engineering",
+        "source": "Università del Salento, Lecce",
         "description": ""
       },
       {
         "date": "2013",
-        "title": "Ingegneria dell’Informazione DM.509 [2013]",
-        "source": "Università degli Studi di Lecce",
+        "title": "Ingegneria dell'Informazione DM.509",
+        "source": "Università del Salento, Lecce",
         "description": ""
       },
       {
         "date": "2007",
-        "title": "Perito Industriale capo-tecnico specializzazione Informatica",
+        "title": "Perito Industriale capo-tecnico, specializzazione Informatica",
         "source": "IISS E. Mattei",
         "description": ""
       }
@@ -52,27 +57,69 @@
     "title": "Certificazioni e Corsi",
     "content": [
       {
+        "date": "2024",
+        "title": "Smart Communication: Public Speaking e Presentazioni efficaci",
+        "source": "Simplify",
+        "description": ""
+      },
+      {
+        "date": "2024",
+        "title": "NestJS Fundamentals",
+        "source": "NestJS",
+        "description": ""
+      },
+      {
         "date": "2023",
         "title": "React Global Online Summit 2023",
         "source": "Geekle.us",
         "description": "React Global Online Summit, server components, typescript and many more..."
       },
       {
+        "date": "2021",
+        "title": "Vue - The Complete Guide (incl. Router & Composition API)",
+        "source": "Udemy",
+        "description": ""
+      },
+      {
         "date": "2020",
-        "title": "Facebook Advanced - Advertising",
-        "source": "Marketers",
+        "title": "Facebook Advanced – Advertising",
+        "source": "WEAREMArketer",
         "description": "La pubblicità è una tattica di marketing che prevede il pagamento di uno spazio per promuovere un prodotto o un servizio."
       },
       {
+        "date": "2020",
+        "title": "NodeJS - The Complete Guide (MVC, REST APIs, GraphQL, Deno)",
+        "source": "Udemy",
+        "description": ""
+      },
+      {
+        "date": "2020",
+        "title": "Complete React Developer in 2020 (w/ Redux, Hooks, GraphQL)",
+        "source": "Udemy",
+        "description": ""
+      },
+      {
+        "date": "2019",
+        "title": "Nuxt.js 2 - Vue.js on Steroids",
+        "source": "Udemy",
+        "description": ""
+      },
+      {
         "date": "2018",
-        "title": "Funnel Secrets",
-        "source": "Marketers",
+        "title": "Marketing Funnel Secrets",
+        "source": "WEAREMArketer",
         "description": "Funnel marketing sono una serie di fasi che guidano i potenziali clienti attraverso il processo di acquisto."
       },
       {
-        "date": "2013",
-        "title": "CCNA Discovery: Networking for Home and Small Businesses",
-        "source": "Centro Cultura Innovativa di Impresa",
+        "date": "2018",
+        "title": "Accelerated ES6 JavaScript Training",
+        "source": "Udemy",
+        "description": ""
+      },
+      {
+        "date": "2018",
+        "title": "Laravel – Framework for Web Applications",
+        "source": "Udemy",
         "description": ""
       }
     ]

@@ -13,8 +13,8 @@ export default function App({ Component, pageProps }: AppProps) {
         <VisitedProvider>
           <Component {...pageProps} />
         </VisitedProvider>
-        <div className="fixed bottom-0 left-2 text-xs font-bold">
-          v.{packageJson?.version}|Updated @04/2025
+        <div className="fixed bottom-0 left-4 text-xs text-gray-500 font-semibold">
+          v.{packageJson?.version}|Updated @06/2026
         </div>
       </AnimatePresence>
     </ThemeProvider>
