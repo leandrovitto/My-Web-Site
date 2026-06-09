@@ -1,9 +1,9 @@
 const authors = {
   "leandro" : {
     name : "Leandro",
-    introduction: "Software Engineer / Founder",
+    introduction: "Senior Frontend Architect / Founder",
     href: "#",
-    imageUrl : "/images/avatar.jpg"
+    imageUrl : "/images/avatar.jpeg"
   }
 }
        

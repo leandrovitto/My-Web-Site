@@ -1,76 +1,80 @@
 const techSkills = [
     {
-        title: 'Frontend Skills',
+        title: 'Frontend & Fullstack',
         icon: 'react',
         skills: [
-            "React Js, Redux, Redux Saga / Vue Js, Vuex",
-            "Next Js & Nuxt Js",
-            "Node Js",
-            "CSS / SCSS / Tailwind UI, Material UI, Bootstrap",
-            "Common Lib / Webpack, Gulp Js, Rollback Js, Vite Js",
-            "TDD Programming,Payment Gateway Stripe Js e Braintree JS",
+            "React.js, Next.js (App Router/SSR), Vue.js, Nuxt.js",
+            "TypeScript, JavaScript",
+            "Tailwind CSS, Material UI, Bootstrap",
+            "Node.js, Fastify, Express.js, Nest.js",
+            "Turborepo monorepo",
+            "TDD, Stripe, Braintree, Better Auth, OAuth 2.0",
         ]
     },
     {
         title: 'Micro Frontend',
         icon: 'nextjs',
         skills: [
+            "Piral.js e Piral CLI",
             "Architectures: Single SPA, Module Federation Webpack 5",
-            "Vite Module Federation/ Events Bus,Piral Js e Piral CLI",
+            "Vite Module Federation / Events Bus",
             "Integration Via Artifact",
             "NPM Private Registry Nexus / Verdaccio",
-            "Monorepository:Lerna Js / Turbo Js",
+            "Monorepository: Turborepo / Lerna.js",
         ]
     },
     {
-        title: 'Cloud,Devops & Project',
+        title: 'AI Engineering',
+        icon: 'ai',
+        skills: [
+            "Claude API, Vercel AI SDK, LangGraph.js, Mastra",
+            "MCP (Model Context Protocol): build server custom, Claude Code subagents",
+            "N8N agentic workflows",
+            "RAG & Embeddings: Qdrant, Supabase vector, retrieval pipelines",
+            "Prompt Engineering, Finetuning",
+        ]
+    },
+    {
+        title: 'Cloud, DevOps & Project',
         icon: 'heroku',
         skills: [
             "Versioning Git, Bitbucket e Github",
             "Docker / Docker Compose",
-            "Agile Method Atlassian Jira, Scrum, Kanban",
-            "Pipeline Bitbucket, Semaphore CI",
-            "Heroku, Digital Ocean,Google Cloud, Amazon AWS, Azure (Basic Structure)",
-            "Kubernetes (Basic Structure)",
+            "Kubernetes, CI/CD (Bitbucket, Semaphore)",
+            "Dokploy, Vercel",
+            "AWS, GCP, Azure",
+            "Agile / Scrum / Kanban, Jira",
         ]
     },
     {
-        title: 'AI (learn in progress)',
-        icon: 'ai',
-        skills: [
-            "RAG, Vector DB, Langchain",
-            "APIs OpenAI, Chatbots, LLMs",
-            "Finetuning, Prompt Engineering",
-            "n8n (Automation)",
-        ]
-    },
-    {
-        title: 'Test e2e',
+        title: 'Test E2E',
         icon: 'javascript',
         skills: [
-            "Playwright Js / Cypress Js",
-            "Cucumber Js / Gerkin",
-            "Jest Js",
+            "Playwright.js / Cypress.js",
+            "Jest.js",
+            "TDD, E2E integration testing",
         ]
     },
     {
         title: 'Backend Background',
         icon: 'nodejs',
         skills: [
-            "Node Js (Express Js) e Next Js",
-            "Springbot (Java)",
+            "Node.js (Fastify, Express.js), Next.js",
+            "Spring Boot (Java)",
             "Laravel 8 (PHP)",
-            "PostgreSQL, MySQL, Redis, Amazon Cache SQS",
+            "PostgreSQL, MySQL, Redis, Amazon SQS",
+            "ORM: Prisma, Drizzle, Neon/Postgres",
+            "Firebase Realtime DB",
         ]
     },
     {
-        title: 'Programming languages',
+        title: 'Linguaggi',
         icon: 'java',
         skills: [
-            "Javascript",
-            "JAVA",
+            "TypeScript",
+            "JavaScript",
             "PHP",
-            "TypeScript/Html",
+            "Java",
         ]
     }
 ]
