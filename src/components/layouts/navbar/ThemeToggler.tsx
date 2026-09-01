@@ -2,8 +2,7 @@ import { useTheme } from 'next-themes';
 import { FunctionComponent, ReactElement } from 'react';
 import React, { useState, useEffect } from 'react';
 
-import { IconType } from "@react-icons/all-files";
-import BtnIcon from '@/components/atoms/icon/BtnIcon';
+import Icon from '@/components/atoms/icon/Icon';
 
 export enum ThemesEnum {
     SYSTEM = 'system',
@@ -17,21 +16,20 @@ const ThemeToggler: FunctionComponent = (): ReactElement | null => {
 
     useEffect(() => setMounted(true), []);
 
-    const handleClick = () => {
-        let newTheme = ThemesEnum.LIGHT;
-        switch (theme) {
+    const nextTheme = (): ThemesEnum => {
+        switch (theme ?? ThemesEnum.SYSTEM) {
             case ThemesEnum.SYSTEM:
-                newTheme = ThemesEnum.DARK
-                break;
+                return ThemesEnum.DARK;
             case ThemesEnum.DARK:
-                newTheme = ThemesEnum.LIGHT
-                break;
+                return ThemesEnum.LIGHT;
             case ThemesEnum.LIGHT:
-                newTheme = ThemesEnum.SYSTEM
-                break;
+                return ThemesEnum.SYSTEM;
+            default:
+                return ThemesEnum.DARK;
         }
-        setTheme(newTheme)
-    }
+    };
+
+    const handleClick = () => setTheme(nextTheme());
 
     const renderIcon = (): string => {
         switch (theme) {
@@ -52,7 +50,21 @@ const ThemeToggler: FunctionComponent = (): ReactElement | null => {
     if (!mounted)
         return null;
 
-    return <BtnIcon id="btn_theme_toggler" onClick={handleClick} icon={renderIcon()} />
+    const themeLabel = {
+        [ThemesEnum.SYSTEM]: 'system',
+        [ThemesEnum.DARK]: 'dark',
+        [ThemesEnum.LIGHT]: 'light',
+    }[nextTheme()];
+
+    return <button
+        id="btn_theme_toggler"
+        type="button"
+        onClick={handleClick}
+        aria-label={`Switch to ${themeLabel} theme`}
+        className="flex h-10 w-10 items-center justify-center rounded-lg text-[var(--ink)] transition-colors hover:bg-[var(--surface-raised)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
+    >
+        <Icon icon={renderIcon()} />
+    </button>
 };
 
 export default ThemeToggler;

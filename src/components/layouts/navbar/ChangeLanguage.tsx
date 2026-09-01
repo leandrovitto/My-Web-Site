@@ -9,7 +9,7 @@ import { Fragment, FunctionComponent, ReactElement, useEffect } from 'react';
 
 const ChangeLanguage: FunctionComponent = (): ReactElement => {
     const { t, lang } = useTranslation("common")
-    const { locale, defaultLocale } = useRouter()
+    const { asPath, locale, defaultLocale } = useRouter()
 
     const languages = t('languages', {}, { returnObjects: true }) as Array<{ name: string, code: string }>;
     const classes = "p-2 h-10 font-bold text-sm flex-shrink-0 rounded-lg text-indigo-800 dark:text-indigo-300 bg-indigo-100 dark:bg-gray-800 cursor-pointer rounded-lg flex items-center justify-center hover:ring-2 ring-blue-400 transition-all duration-300 focus:outline-none"
@@ -54,7 +54,7 @@ const ChangeLanguage: FunctionComponent = (): ReactElement => {
                         {languages.map((lng, idx) => {
                             return <Menu.Item key={idx}>
                                 {({ active }) => (
-                                    <Link href="/" locale={lng.code}
+                                    <Link href={asPath} locale={lng.code}
                                         className={clsx(
                                             active ? 'bg-gray-100 dark:bg-gray-800  text-gray-900 dark:text-gray-100' : 'text-gray-700 dark:text-gray-100',
                                             'block px-4 py-2 text-sm',

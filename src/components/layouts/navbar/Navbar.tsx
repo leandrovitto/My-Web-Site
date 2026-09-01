@@ -6,6 +6,7 @@ import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Fragment, FunctionComponent, ReactElement } from 'react';
+import CvDownload from '@/components/portfolio/CvDownload';
 import ChangeLanguage from './ChangeLanguage';
 import ThemeToggler from './ThemeToggler';
 
@@ -63,7 +64,7 @@ const MenuMobile = () => {
                         </div>
                     </div>
                     <div className="mt-6">
-                        <nav className="grid grid-cols-2 gap-y-8">
+                        <div className="grid grid-cols-2 gap-y-8">
                             {menu.map((item, idx) => (
                                 <Link
                                     key={idx}
@@ -75,12 +76,13 @@ const MenuMobile = () => {
                                     <span className="ml-3 text-base font-medium text-gray-900 dark:text-gray-100">{item.name}</span>
                                 </Link>
                             ))}
-                        </nav>
+                        </div>
                     </div>
                 </div>
                 <div className="flex items-center justify-end md:flex md:flex-1 lg:w-0 gap-2 py-4 px-4">
                     <ThemeToggler />
                     <ChangeLanguage />
+                    <CvDownload />
                 </div>
             </div>
         </Popover.Panel>
@@ -91,7 +93,7 @@ export const Navbar: FunctionComponent<NavbarProps> = ({ }: NavbarProps): ReactE
     const { t } = useTranslation('common')
     const [menu] = useMenuHook();
 
-    return <nav>
+    return <nav data-cy="main-nav" aria-label={t('navigation.primary')}>
         <Popover>
             <div className=''>
                 <div className="flex items-center justify-between border-gray-100 py-2 md:justify-start md:space-x-10 px-4 max-w-7xl mx-auto ">
@@ -104,7 +106,7 @@ export const Navbar: FunctionComponent<NavbarProps> = ({ }: NavbarProps): ReactE
                             <Icon icon="menu" withoutStyle />
                         </Popover.Button>
                     </div>
-                    <nav className="hidden space-x-10 md:flex">
+                    <div className="hidden space-x-10 md:flex">
                         {menu.map((item, idx) => (
                             <Link
                                 id={`menu_item_${idx}`}
@@ -117,10 +119,11 @@ export const Navbar: FunctionComponent<NavbarProps> = ({ }: NavbarProps): ReactE
                                 <span className="ml-3 text-base font-medium text-gray-900 dark:text-gray-100">{item.name}</span>
                             </Link>
                         ))}
-                    </nav>
+                    </div>
                     <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0 gap-2">
                         <ThemeToggler />
                         <ChangeLanguage />
+                        <CvDownload />
                     </div>
                 </div>
                 <MenuMobile />
