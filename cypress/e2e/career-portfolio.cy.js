@@ -5,4 +5,10 @@ describe('career portfolio shell', () => {
     cy.get('[data-cy="main-nav"]').contains('Progetti').should('have.attr', 'href', '/portfolio');
     cy.get('[data-cy="main-nav"]').contains('Profilo').should('have.attr', 'href', '/about');
   });
+
+  it('moves keyboard focus to the main landmark from the skip link', () => {
+    cy.visit('/');
+    cy.get('a[href="#main-content"]').click();
+    cy.get('#main-content').should('be.focused');
+  });
 });

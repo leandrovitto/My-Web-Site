@@ -8,7 +8,7 @@ import packageJson from "../../package.json";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider enableSystem={true} attribute="class">
+    <ThemeProvider enableSystem={true} attribute="class" defaultTheme="light">
       <AnimatePresence>
         <VisitedProvider>
           <Component {...pageProps} />

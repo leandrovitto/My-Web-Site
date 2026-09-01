@@ -20,7 +20,19 @@
       "download" : "Scarica il CV"
     },
     "navigation" : {
-      "primary" : "Navigazione principale"
+      "primary" : "Navigazione principale",
+      "logo" : "Pagina iniziale di Leandro",
+      "open_menu" : "Apri menu",
+      "close_menu" : "Chiudi menu"
+    },
+    "accessibility" : {
+      "skip_to_content" : "Salta al contenuto"
+    },
+    "theme" : {
+      "next" : "Passa al tema {{theme}}",
+      "system" : "di sistema",
+      "dark" : "scuro",
+      "light" : "chiaro"
     },
     "btn" : {
       "download_cv" : "Download CV",

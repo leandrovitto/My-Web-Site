@@ -22,7 +22,7 @@ const Logo = () => {
 
     return <Link href={Routes.home}>
         <div className='flex flex-row gap-2 items-center'>
-            <span className="sr-only">Your Company</span>
+            <span className="sr-only">{t('navigation.logo')}</span>
             <Image
                 className="h-16 w-auto sm:h-10 "
                 src="/images/logo.png"
@@ -58,7 +58,7 @@ const MenuMobile = () => {
                         <Logo />
                         <div className="-mr-2">
                             <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white dark:bg-gray-800 p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                                <span className="sr-only">Close menu</span>
+                                <span className="sr-only">{t('navigation.close_menu')}</span>
                                 <Icon icon="close" withoutStyle />
                             </Popover.Button>
                         </div>
@@ -102,7 +102,7 @@ export const Navbar: FunctionComponent<NavbarProps> = ({ }: NavbarProps): ReactE
                     </div>
                     <div className="-my-2 -mr-2 md:hidden">
                         <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white dark:bg-gray-800 p-2 text-gray-400 dark:text-gray-100 hover:bg-gray-100 hover:text-gray-500 focus:outline-none border border-gray-300">
-                            <span className="sr-only">Open menu</span>
+                            <span className="sr-only">{t('navigation.open_menu')}</span>
                             <Icon icon="menu" withoutStyle />
                         </Popover.Button>
                     </div>
