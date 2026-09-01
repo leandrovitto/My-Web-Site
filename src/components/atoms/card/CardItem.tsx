@@ -120,7 +120,7 @@ const CardItem: FunctionComponent<CardItemProps> = ({ big = false, item }: CardI
                 </ul>}
 
                 {(item as ProjectContent).gallery && <div className="mt-2 inline-flex gap-2">
-                    {(item as ProjectContent).gallery.map((g, idx) => <ImageViewer img={g} alt={getNameFile(g)} />)}
+                    {(item as ProjectContent).gallery.map((g) => <ImageViewer key={g} img={g} alt={getNameFile(g)} />)}
                 </div>}
 
                 {(item as ProjectContent).stack && <div className="mt-2">
