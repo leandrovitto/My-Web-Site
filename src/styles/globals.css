@@ -1,4 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+
 @tailwind base;
+
+:root {
+    --surface: #e9edf5;
+    --surface-raised: #f9fbff;
+    --ink: #0c1222;
+    --muted: #5e677a;
+    --line: #cbd2df;
+    --accent: #315cff;
+    --signal: #d8ff39;
+}
+
+.dark {
+    --surface: #111827;
+    --surface-raised: #171717;
+    --ink: #edf2ff;
+    --muted: #aab4c8;
+    --line: #3d4a63;
+    --accent: #6f8cff;
+    --signal: #d8ff39;
+}
 
 @layer base {
     h1 {
@@ -47,3 +69,11 @@
     }
 }
 
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
