@@ -11,4 +11,11 @@ describe('career portfolio shell', () => {
     cy.get('a[href="#main-content"]').click();
     cy.get('#main-content').should('be.focused');
   });
+
+  it('renders featured work and supports a category filter', () => {
+    cy.visit('/portfolio');
+    cy.get('[data-cy="case-study"]').should('have.length.at.least', 3);
+    cy.get('[data-cy="project-filter"]').contains('SaaS').click();
+    cy.get('[data-cy="case-study"]').each(($card) => cy.wrap($card).should('contain.text', 'SaaS'));
+  });
 });

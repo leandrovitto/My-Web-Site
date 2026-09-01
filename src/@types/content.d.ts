@@ -16,15 +16,17 @@ export type AuthorContent = {
 export type ProjectContent = {
     readonly slug: string;
     readonly title: string;
-    readonly href: string;
-    readonly imageUrl: string;
-    readonly date: string;
+    readonly href?: string;
+    readonly imageUrl?: string;
+    readonly date: number | string;
     readonly datetime: string;
     readonly category: string;
     readonly author: string;
     readonly portfolio: boolean;
-    readonly stack: string[];
-    readonly gallery: string[];
+    readonly stack?: string[];
+    readonly gallery?: string[];
+    readonly outcome?: string;
+    readonly featured?: boolean;
     content: string;
     source: MDXRemoteSerializeResult;
 };

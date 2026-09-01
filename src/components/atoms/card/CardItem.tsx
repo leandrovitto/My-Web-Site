@@ -51,9 +51,10 @@ const CardItem: FunctionComponent<CardItemProps> = ({ big = false, item }: CardI
     }
 
     const Linked = ({ item, children }: { item: ProjectContent | TechskillContent, children: ReactNode }) => {
-        const hasLink = ((item as ProjectContent)?.href && (item as ProjectContent).href != linkNone) ?? false;
+        const href = (item as ProjectContent).href;
+        const hasLink = Boolean(href && href !== linkNone);
 
-        return hasLink ? <Link href={(item as ProjectContent).href} target='_blank' className='hover:ring-2 hover:rounded-2xl md:mr-4' >
+        return hasLink ? <Link href={href!} target='_blank' className='hover:ring-2 hover:rounded-2xl md:mr-4' >
             {children}
         </Link> :
             <div className='md:mr-4'>{children}</div>
@@ -84,7 +85,7 @@ const CardItem: FunctionComponent<CardItemProps> = ({ big = false, item }: CardI
 
         <div className="flex flex-col md:flex-row md:items-center md:justify-between p-4">
             <Linked item={item}>
-                {(item as ProjectContent).imageUrl && <ImageBig imageUrl={(item as ProjectContent).imageUrl} big={big} />}
+                {(item as ProjectContent).imageUrl && <ImageBig imageUrl={(item as ProjectContent).imageUrl!} big={big} />}
 
                 {!(item as ProjectContent).imageUrl && <>
                     <div className='mx-auto animate-spin-15 w-10 md:mx-2'>
@@ -120,11 +121,11 @@ const CardItem: FunctionComponent<CardItemProps> = ({ big = false, item }: CardI
                 </ul>}
 
                 {(item as ProjectContent).gallery && <div className="mt-2 inline-flex gap-2">
-                    {(item as ProjectContent).gallery.map((g) => <ImageViewer key={g} img={g} alt={getNameFile(g)} />)}
+                    {(item as ProjectContent).gallery!.map((g) => <ImageViewer key={g} img={g} alt={getNameFile(g)} />)}
                 </div>}
 
                 {(item as ProjectContent).stack && <div className="mt-2">
-                    <IconStack stack={(item as ProjectContent).stack} />
+                    <IconStack stack={(item as ProjectContent).stack!} />
                 </div>}
             </div>
         </div>
@@ -136,7 +137,7 @@ const CardItem: FunctionComponent<CardItemProps> = ({ big = false, item }: CardI
                     <Author author={getAuthor(lang, (item as ProjectContent).author)} />
                 </div>
                 {(item as ProjectContent).href != linkNone && <div className="w-1/6 flex justify-center my-2">
-                    <DownloadButton link={(item as ProjectContent).href} />
+                    <DownloadButton link={(item as ProjectContent).href!} />
                 </div>}
             </div>
         }
