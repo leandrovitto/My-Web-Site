@@ -11,7 +11,7 @@ const Error404: FunctionComponent<
   const { t } = useTranslation("common");
 
   return (
-    <main className="mx-auto flex w-full max-w-7xl flex-auto flex-col justify-center px-6 py-48 h-screen sm:py-16 lg:px-8">
+    <section className="mx-auto flex w-full max-w-7xl flex-auto flex-col justify-center px-6 py-48 h-screen sm:py-16 lg:px-8">
       <p className="text-base font-semibold leading-8 text-indigo-600">404</p>
       <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl">
         {t("error.404")}
@@ -27,7 +27,7 @@ const Error404: FunctionComponent<
           <span aria-hidden="true">&larr;</span> {t("error.back_to_home")}
         </Link>
       </div>
-    </main>
+    </section>
   );
 };
 

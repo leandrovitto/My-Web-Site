@@ -1,5 +1,39 @@
 {
-    "title": "Home",
-    "welcome" : "Benvenuto!",
-    "welcome_back" : "Bentornato!"
+  "title": "Senior Software Engineer",
+  "hero": {
+    "eyebrow": "Leandro Vitto / Software engineering",
+    "title": "Senior Software Engineer.",
+    "description_primary": "Progetto e costruisco prodotti software, dall'architettura all'interfaccia, trasformando problemi complessi in soluzioni semplici, solide e mantenibili.",
+    "description_secondary": "Lavoro a stretto contatto con team e prodotto, seguendo il software dalla progettazione al rilascio. Oggi esploro come AI e nuovi strumenti possano migliorare il modo in cui progettiamo, sviluppiamo e facciamo evolvere i sistemi.",
+    "note_primary": "Dal problema al sistema.",
+    "note_secondary": "Dal sistema al prodotto."
+  },
+  "metrics": [
+    { "label": "Esperienza", "value": "10+ anni" },
+    { "label": "Contesti", "value": "Prodotti B2B / B2C" },
+    { "label": "Contributo", "value": "Mentoring e leadership" }
+  ],
+  "featured": {
+    "eyebrow": "Lavoro selezionato",
+    "title": "Decisioni tecniche con un impatto visibile.",
+    "description": "Una selezione di prodotti, piattaforme e sistemi costruiti con attenzione a qualita, autonomia dei team e manutenzione.",
+    "action": "Vedi tutti i progetti"
+  },
+  "codewave": {
+    "eyebrow": "Codewave.dev / formazione",
+    "title": "Condivido pratica, strumenti e percorsi per chi sviluppa software.",
+    "description": "Codewave.dev e il mio progetto di formazione online: contenuti e risorse concrete su sviluppo web, prodotti digitali e carriera tech.",
+    "action": "Scopri codewave.dev",
+    "action_aria": "Visita codewave.dev, sito esterno"
+  },
+  "principles": {
+    "eyebrow": "Metodo di lavoro",
+    "title": "Rigore tecnico, orientato al prodotto.",
+    "items": [
+      { "title": "Architettura", "description": "Scelgo confini e convenzioni che rendono il sistema comprensibile e modificabile." },
+      { "title": "Delivery", "description": "Riduco il rischio con piccoli incrementi, feedback continui e ownership condivisa." },
+      { "title": "Qualita", "description": "Testing, osservabilita e CI/CD sono parte del prodotto, non una fase finale." },
+      { "title": "Collaborazione", "description": "Rendo esplicite le decisioni e faccio crescere autonomia e capacita del team." }
+    ]
+  }
 }

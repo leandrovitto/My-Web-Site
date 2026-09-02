@@ -1,9 +1,7 @@
 import useTranslation from 'next-translate/useTranslation';
 import { FunctionComponent, ReactElement, useEffect, useState } from 'react';
-
-import Title from '@/components/atoms/Title';
+import SectionHeading from '@/components/portfolio/SectionHeading';
 import { getTechskills } from '@/lib/techskills';
-import CardGroup from '../../atoms/card/CardGroup';
 import { TechskillContent } from '@/@types';
 
 type Props = {}
@@ -18,21 +16,20 @@ const TechSkills: FunctionComponent<Props> = ({ }: Props): ReactElement => {
             const t = await getTechskills(lang);
             setTech(t)
         })()
-    }, [tech, lang])
+    }, [lang])
 
     return <>
-        <div className="overflow-hidden my-16">
-            <div>
-                <div className="max-w-2xl md:mx-auto lg:text-center">
-                    <Title title={t("techskills.title")} subtitle={t("title")}>
-                        <span className="inline-block flex-shrink-0 rounded-md bg-indigo-100 dark:text-indigo-100 dark:bg-indigo-900 px-2 py-1 text-xs md:text-base font-bold text-indigo-800">
-                            {t("techskills.description")}
-                        </span>
-                    </Title>
-                </div>
-                <CardGroup group={tech} />
+        <section className="my-16">
+            <SectionHeading eyebrow={t("capabilities.eyebrow")} title={t("techskills.title")} description={t("techskills.description")} />
+            <div className="mt-8 grid gap-4 md:grid-cols-2">
+                {tech.map((group) => <article data-cy="capability-group" key={group.title} className="border border-[var(--line)] bg-[var(--surface-raised)] p-5">
+                    <h3 className="font-mono text-base font-semibold">{group.title}</h3>
+                    <ul className="mt-4 flex list-none flex-wrap gap-2 !ml-0">
+                        {group.skills.map((skill) => <li key={skill} className="border border-[var(--line)] px-2 py-1 font-mono text-xs text-[var(--muted)]">{skill}</li>)}
+                    </ul>
+                </article>)}
             </div>
-        </div>
+        </section>
     </>
 }
 

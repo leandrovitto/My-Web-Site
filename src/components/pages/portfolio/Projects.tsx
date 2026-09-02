@@ -1,8 +1,9 @@
 import useTranslation from 'next-translate/useTranslation'
 import { FunctionComponent, ReactElement } from 'react'
-import CardGroup from '../../atoms/card/CardGroup'
-import Title from '../../atoms/Title'
 import { ProjectContent } from '@/@types'
+import CaseStudyGrid from '@/components/portfolio/CaseStudyGrid'
+import SectionHeading from '@/components/portfolio/SectionHeading'
+import { normalizeProject } from '@/lib/portfolio'
 
 type ProjectProps = {
     projects: ProjectContent[];
@@ -13,12 +14,12 @@ const Projects: FunctionComponent<ProjectProps> = ({ projects }: ProjectProps): 
 
     return (
         <div>
-            <Title title={t("projects.title")} >
+            <SectionHeading title={t("projects.title")} >
                 <p>
                     {t("projects.description")}
                 </p>
-            </Title>
-            <CardGroup group={projects} big />
+            </SectionHeading>
+            <CaseStudyGrid projects={projects.map(normalizeProject)} />
         </div>
     )
 }

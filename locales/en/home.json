@@ -1,5 +1,39 @@
 {
-    "title": "Home",
-    "welcome" : "Welcome!",
-    "welcome_back" : "Welcome back!"
+  "title": "Senior Software Engineer",
+  "hero": {
+    "eyebrow": "Leandro Vitto / Software engineering",
+    "title": "Senior Software Engineer.",
+    "description_primary": "I design and build software products, from architecture to interface, turning complex problems into simple, robust, and maintainable solutions.",
+    "description_secondary": "I work closely with teams and product, following software from design through release. Today, I explore how AI and new tools can improve the way we design, develop, and evolve systems.",
+    "note_primary": "From problem to system.",
+    "note_secondary": "From system to product."
+  },
+  "metrics": [
+    { "label": "Experience", "value": "10+ years" },
+    { "label": "Contexts", "value": "B2B / B2C products" },
+    { "label": "Contribution", "value": "Mentoring and leadership" }
+  ],
+  "featured": {
+    "eyebrow": "Selected work",
+    "title": "Technical decisions with visible impact.",
+    "description": "A selection of products, platforms, and systems built for quality, team autonomy, and long-term maintenance.",
+    "action": "View all work"
+  },
+  "codewave": {
+    "eyebrow": "Codewave.dev / education",
+    "title": "I share practical tools and learning paths for people building software.",
+    "description": "Codewave.dev is my online education project: concrete content and resources on web development, digital products, and technology careers.",
+    "action": "Discover codewave.dev",
+    "action_aria": "Visit codewave.dev, external site"
+  },
+  "principles": {
+    "eyebrow": "How I work",
+    "title": "Technical rigor in service of the product.",
+    "items": [
+      { "title": "Architecture", "description": "I choose boundaries and conventions that keep systems understandable and changeable." },
+      { "title": "Delivery", "description": "I reduce risk through small increments, continuous feedback, and shared ownership." },
+      { "title": "Quality", "description": "Testing, observability, and CI/CD are part of the product, not a final phase." },
+      { "title": "Collaboration", "description": "I make decisions explicit and help teams build autonomy and capability." }
+    ]
+  }
 }

@@ -3,6 +3,8 @@ import config from "../../../lib/config";
 import Head from "next/head";
 import { FunctionComponent, ReactElement } from 'react';
 
+const absoluteUrl = (path: string): string => new URL(path, config.base_url).toString();
+
 type OpenGraphProps = {
   url: string;
   title?: string;
@@ -23,10 +25,10 @@ const OpenGraphMeta: FunctionComponent<OpenGraphProps> = ({
   return (
     <Head>
       <meta property="og:site_name" content={tseo('title')} />
-      <meta property="og:url" content={config.base_url + url} />
+      <meta property="og:url" content={absoluteUrl(url)} />
       <meta
         property="og:title"
-        content={title ? [title, tseo('title')].join(" | ") : ""}
+        content={title ? [title, tseo('title')].join(" | ") : tseo('title')}
       />
       <meta
         property="og:description"
@@ -34,8 +36,9 @@ const OpenGraphMeta: FunctionComponent<OpenGraphProps> = ({
       />
       <meta
         property="og:image"
-        content={image ? image : config.image}
+        content={absoluteUrl(image ? image : config.image)}
       />
+      <meta property="og:image:alt" content={title ? `${title} | ${tseo('title')}` : tseo('title')} />
       <meta property="og:type" content={type} />
     </Head>
   );

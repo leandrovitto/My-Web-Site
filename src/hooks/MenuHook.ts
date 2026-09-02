@@ -1,4 +1,3 @@
-import React from 'react'
 import { Routes } from '@/routes';
 import useTranslation from 'next-translate/useTranslation';
 
@@ -16,18 +15,13 @@ const useMenuHook = (): [
 
     const menu = [
         {
-            name: t("menu.home"),
-            href: Routes.home,
-            icon: "bar_chart",
-        },
-        {
-            name: t("menu.about"),
-            href: Routes.about,
+            name: t("menu.profile"),
+            href: Routes.profile,
             icon: "shield_lock",
         },
         {
-            name: t("menu.portfolio"),
-            href: Routes.portfolio,
+            name: t("menu.work"),
+            href: Routes.work,
             icon: "box_circles"
         },
         /* {

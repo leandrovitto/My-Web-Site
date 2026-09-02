@@ -4,6 +4,8 @@ import useTranslation from 'next-translate/useTranslation';
 import Head from 'next/head';
 import { FunctionComponent, ReactElement } from 'react';
 
+const absoluteUrl = (path: string): string => new URL(path, config.base_url).toString();
+
 type BaseMetaProps = {
     title?: string;
     description?: string;
@@ -38,7 +40,7 @@ const BaseMeta: FunctionComponent<BaseMetaProps> = ({
             }
         />
         {author && <meta name="author" content={author} />}
-        <link rel="canonical" href={config.base_url + url} />
+        <link rel="canonical" href={absoluteUrl(url)} />
         <link rel="icon" href="/favicon.ico" />
     </Head>
 }

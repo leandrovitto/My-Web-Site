@@ -9,7 +9,7 @@ type SocialBarProps = {}
 const SocialBar: FunctionComponent<SocialBarProps> = ({ }: SocialBarProps): ReactElement => {
     const social: Social = config.social;
 
-    return <div className="flex flex-1 md:justify-end gap-2 text-left my-2">
+    return <div className="flex flex-wrap gap-2 text-left">
         {social.map((s, idx) => {
             return <LinkIcon key={idx} icon={s.name} link={s.link} />
         })}

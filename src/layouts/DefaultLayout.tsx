@@ -1,8 +1,7 @@
-import { Navbar } from '@/components/layouts/navbar/Navbar'
 import { FunctionComponent, ReactElement, ReactNode } from 'react'
-import Footer from '@/components/layouts/Footer'
 import Image from 'next/image'
 import PageTransitionWrapper from '@/components/layouts/PageTransitionWrapper'
+import SiteShell from '@/components/layouts/SiteShell'
 
 type DefaultLayoutProps = {
     children: ReactNode,
@@ -12,13 +11,8 @@ type DefaultLayoutProps = {
 const DefaultLayout: FunctionComponent<DefaultLayoutProps> = ({ children, image }: DefaultLayoutProps): ReactElement => {
 
     return (
-        <main className="font-sans subpixel-antialiased">
+        <SiteShell>
             <div className='relative h-screen overflow-auto ring -my-px'>
-
-                <div className="sticky top-0 z-10 backdrop-blur-sm border-b border-gray-900/10 md:mx-8">
-                    <Navbar />
-                </div>
-
                 <PageTransitionWrapper>
                     <section className="mx-auto mb-48">
                         {image && <div>
@@ -29,10 +23,8 @@ const DefaultLayout: FunctionComponent<DefaultLayoutProps> = ({ children, image 
                         </div>
                     </section>
                 </PageTransitionWrapper>
-
-                <Footer />
             </div>
-        </main>
+        </SiteShell>
     )
 
 }

@@ -1,9 +1,8 @@
 import { useTheme } from 'next-themes';
-import { FunctionComponent, ReactElement } from 'react';
-import React, { useState, useEffect } from 'react';
+import useTranslation from 'next-translate/useTranslation';
+import { FunctionComponent, ReactElement, useEffect, useState } from 'react';
 
-import { IconType } from "@react-icons/all-files";
-import BtnIcon from '@/components/atoms/icon/BtnIcon';
+import Icon from '@/components/atoms/icon/Icon';
 
 export enum ThemesEnum {
     SYSTEM = 'system',
@@ -13,46 +12,50 @@ export enum ThemesEnum {
 
 const ThemeToggler: FunctionComponent = (): ReactElement | null => {
     const { theme, setTheme } = useTheme();
+    const { t } = useTranslation('common');
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => setMounted(true), []);
 
-    const handleClick = () => {
-        let newTheme = ThemesEnum.LIGHT;
-        switch (theme) {
+    const nextTheme = (): ThemesEnum => {
+        switch (theme ?? ThemesEnum.SYSTEM) {
             case ThemesEnum.SYSTEM:
-                newTheme = ThemesEnum.DARK
-                break;
+                return ThemesEnum.DARK;
             case ThemesEnum.DARK:
-                newTheme = ThemesEnum.LIGHT
-                break;
+                return ThemesEnum.LIGHT;
             case ThemesEnum.LIGHT:
-                newTheme = ThemesEnum.SYSTEM
-                break;
+                return ThemesEnum.SYSTEM;
+            default:
+                return ThemesEnum.DARK;
         }
-        setTheme(newTheme)
-    }
+    };
+
+    const handleClick = () => setTheme(theme === ThemesEnum.LIGHT ? ThemesEnum.DARK : nextTheme());
 
     const renderIcon = (): string => {
         switch (theme) {
             case ThemesEnum.SYSTEM:
-                return "desktop"
-                break;
+                return "desktop";
             case ThemesEnum.DARK:
-                return "moon"
-                break;
+                return "moon";
             case ThemesEnum.LIGHT:
             default:
-                return "sun"
-                break;
-
+                return "sun";
         }
     }
 
     if (!mounted)
         return null;
 
-    return <BtnIcon id="btn_theme_toggler" onClick={handleClick} icon={renderIcon()} />
+    return <button
+        id="btn_theme_toggler"
+        type="button"
+        onClick={handleClick}
+        aria-label={t('theme.next', { theme: t(`theme.${nextTheme()}`) })}
+        className="flex h-9 w-9 items-center justify-center border border-[var(--line)] bg-[var(--surface-raised)] text-[var(--ink)] transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+    >
+        <Icon icon={renderIcon()} />
+    </button>
 };
 
 export default ThemeToggler;

@@ -14,8 +14,26 @@
     ],
     "menu" : {
       "home" : "Home",
-      "about" : "About",
-      "portfolio" : "Portfolio"
+      "profile" : "Profile",
+      "work" : "Work"
+    },
+    "cv" : {
+      "download" : "Download CV"
+    },
+    "navigation" : {
+      "primary" : "Primary navigation",
+      "logo" : "Leandro home page",
+      "open_menu" : "Open menu",
+      "close_menu" : "Close menu"
+    },
+    "accessibility" : {
+      "skip_to_content" : "Skip to content"
+    },
+    "theme" : {
+      "next" : "Switch to {{theme}} theme",
+      "system" : "system",
+      "dark" : "dark",
+      "light" : "light"
     },
     "btn" : {
       "download_cv" : "Download CV",

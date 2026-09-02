@@ -8,14 +8,14 @@ import packageJson from "../../package.json";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider enableSystem={true} attribute="class">
+    <ThemeProvider enableSystem={true} attribute="class" defaultTheme="light">
       <AnimatePresence>
         <VisitedProvider>
           <Component {...pageProps} />
         </VisitedProvider>
-        <div className="fixed bottom-0 left-4 text-xs text-gray-500 font-semibold">
-          v.{packageJson?.version}|Updated @06/2026
-        </div>
+        <span className="fixed bottom-3 left-3 z-20 border border-[var(--line)] bg-[var(--surface-raised)] px-2 py-1 font-mono text-[10px] font-semibold tracking-[0.08em] text-[var(--muted)]">
+          v{packageJson.version}
+        </span>
       </AnimatePresence>
     </ThemeProvider>
   );

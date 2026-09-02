@@ -7,25 +7,27 @@ type TwitterCardProps = {
   url: string;
   title?: string;
   description?: string;
+  image?: string;
 };
 
 const TwitterCardMeta: FunctionComponent<TwitterCardProps> = ({
   title,
   description,
   url,
+  image,
 }: TwitterCardProps): ReactElement => {
   const { t: tseo } = useTranslation('seo')
 
   return (
     <Head>
       <meta name="twitter:creator" content={config.author} />
-      <meta name="twitter:image" content={config.image} />
+      <meta name="twitter:image" content={new URL(image ? image : config.image, config.base_url).toString()} />
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:site" content={config.twitter_account} />
-      <meta property="twitter:url" content={config.base_url + url} />
+      <meta property="twitter:url" content={new URL(url, config.base_url).toString()} />
       <meta
         property="twitter:title"
-        content={title ? [title, tseo('title')].join(" | ") : ""}
+        content={title ? [title, tseo('title')].join(" | ") : tseo('title')}
       />
       <meta
         property="twitter:description"

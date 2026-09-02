@@ -1,5 +1,20 @@
 {
-    "title": "Portfolio",
+    "title": "Progetti",
+    "eyebrow": "Portfolio / evidenze",
+    "description": "Prodotti e piattaforme dove architettura frontend, delivery e collaborazione hanno guidato le decisioni.",
+    "filters": { "all": "Tutti" },
+    "groups": {
+        "products": {
+            "eyebrow": "02 / prodotti digitali",
+            "title": "SaaS, piattaforme e prodotti live",
+            "description": "Prodotti pensati per utenti reali: strategia tecnica, esperienza, operativita e manutenzione nel tempo."
+        },
+        "code": {
+            "eyebrow": "01 / codice aperto",
+            "title": "Repository e sperimentazioni tecniche",
+            "description": "Proof of concept, librerie e approfondimenti condivisi su GitHub per esplorare idee, pattern e strumenti."
+        }
+    },
     "projects" : {
         "title" : "Projects",
         "description" : "I miei progetti sono..."
