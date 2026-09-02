@@ -1,31 +1,29 @@
 import Meta from '@/components/layouts/meta/Meta';
-import Portfolio from '@/components/pages/portfolio/Portfolio';
-import Projects from '@/components/pages/portfolio/Projects';
-import WakaTime from '@/components/pages/portfolio/WakaTime';
+import SiteShell from '@/components/layouts/SiteShell';
+import CaseStudyGrid from '@/components/portfolio/CaseStudyGrid';
+import SectionHeading from '@/components/portfolio/SectionHeading';
 import { getAllProjects } from '@/lib/projects';
+import { normalizeProject, PortfolioProject } from '@/lib/portfolio';
 import { Routes } from '@/routes';
 import { GetStaticProps } from 'next';
-import { serialize } from 'next-mdx-remote/serialize';
 import useTranslation from 'next-translate/useTranslation';
-import DefaultLayout from '../layouts/DefaultLayout';
-import { ProjectContent } from '@/@types';
 
 type Props = {
-  projects: ProjectContent[];
-  portfolio: ProjectContent[];
+  projects: PortfolioProject[];
 };
 
-export default function Home({ projects, portfolio }: Props) {
+export default function PortfolioPage({ projects }: Props) {
   const { t } = useTranslation('portfolio')
 
   return (
     <>
       <Meta title={t("title")} url={Routes.portfolio} />
-      <DefaultLayout>
-        <Portfolio portfolio={portfolio} />
-        <Projects projects={projects} />
-        <WakaTime />
-      </DefaultLayout>
+      <SiteShell>
+        <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:px-10">
+          <SectionHeading as="h1" eyebrow={t("eyebrow")} title={t("title")} description={t("description")} />
+          <div className="mt-10"><CaseStudyGrid projects={projects} /></div>
+        </section>
+      </SiteShell>
     </>
   )
 }
@@ -34,20 +32,11 @@ export default function Home({ projects, portfolio }: Props) {
 export const getStaticProps: GetStaticProps = async (context) => {
   const { locale } = context;
 
-  let projects = getAllProjects(locale);
-
-  projects.forEach(async (p) => {
-    const mdxSource = await serialize(p.content)
-    p.source = mdxSource;
-  })
-
-  const portfolio = projects.filter((p) => p.portfolio === true);
-  projects = projects.filter((p) => p.portfolio === false);
+  const projects = getAllProjects(locale).map(normalizeProject);
 
   return {
     props: {
-      projects,
-      portfolio
+      projects
     }
   };
 };

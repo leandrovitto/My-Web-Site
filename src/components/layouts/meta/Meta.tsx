@@ -28,7 +28,7 @@ const Meta: FunctionComponent<MetaProps> = ({
 }: MetaProps): ReactElement => {
     return <>
         <BaseMeta title={title} url={url} description={description} keywords={keywords} author={author} />
-        <TwitterCardMeta title={title} url={url} description={description} />
+        <TwitterCardMeta title={title} url={url} description={description} image={image} />
         <OpenGraphMeta title={title} url={url} description={description} image={image} type={type} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </>

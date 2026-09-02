@@ -1,11 +1,64 @@
 {
-  "title": "About",
+  "title": "Profilo",
+  "hero": {
+    "eyebrow": "Profilo / carriera",
+    "description": "Senior engineer hands-on con esperienza nella costruzione di sistemi frontend, prodotti digitali e team piu autonomi.",
+    "image_alt": "Ritratto di Leandro Vitto"
+  },
+  "timeline": { "eyebrow": "Esperienza professionale" },
+  "introduction": {
+    "eyebrow": "In sintesi",
+    "paragraphs": [
+      "Ciao, sono Leandro. Senior Software Engineer con oltre 10 anni di esperienza su progetti enterprise B2B e B2C.",
+      "Progetto architetture frontend scalabili, dai micro-frontend con Piral.js ai monorepo Turborepo e ai sistemi di design modulari, con una solida base fullstack su Node.js, Fastify e PostgreSQL.",
+      "In Adesso S.p.A. lavoro su architetture micro-frontend e affianco team di sviluppo su progetti enterprise complessi, con attenzione a delivery, qualita e mentoring.",
+      "Ho fondato SmartplateMenu, SaaS multi-tenant live per la ristorazione, costruito con Turborepo, Next.js App Router, Fastify e integrazioni AI basate su n8n e Claude API.",
+      "Integro sistemi AI e LLM in produzione: MCP server custom, agentic workflows, LangGraph.js e Vercel AI SDK. Con Codewave.dev condivido formazione tecnica e contenuti pratici con una community di sviluppatori."
+    ]
+  },
+  "capabilities": { "eyebrow": "Capacita per valore prodotto" },
+  "codewave": {
+    "eyebrow": "Personal brand / formazione",
+    "title": "Codewave.dev: formazione pratica per chi costruisce software.",
+    "description": "Con Codewave.dev condivido percorsi, contenuti e risorse sulla programmazione web e sulla carriera software. Un progetto formativo nato dalla pratica quotidiana su prodotti e sistemi reali.",
+    "action": "Visita codewave.dev",
+    "action_aria": "Visita codewave.dev, sito esterno"
+  },
+  "personal": {
+    "title": "Oltre il lavoro",
+    "items": [
+      {
+        "title": "Trading",
+        "subtitle": "Biografia / mercati",
+        "paragraphs": [
+          "Negli affari le cose migliori da fare sono quelle semplici, ma e sempre molto difficile farle. [W. Buffett]",
+          "Amo il mercato Forex. Studio analisi tecnica e fondamentale, con focus su EUR/USD, USD/JPY, GBP/USD, GER30 e Dow30.",
+          "Lavoro con MetaTrader 4 e TradingView. Tra i libri che apprezzo: La mente del trader e Operazioni di trading sul Forex."
+        ]
+      },
+      {
+        "title": "Hobbies e sport",
+        "subtitle": "Biografia / movimento",
+        "paragraphs": [
+          "Run for life: mi piace correre su ghiaia e asfalto e mi alleno quattro o cinque giorni a settimana.",
+          "Ho praticato arti marziali, in particolare judo e karate. Oggi mi alleno soprattutto con il CrossFit, insieme a running e lavoro di forza."
+        ]
+      },
+      {
+        "title": "Musica",
+        "subtitle": "Biografia / suono",
+        "paragraphs": [
+          "Per dieci anni ho lavorato come ingegnere del suono e DJ. Avevo un piccolo studio dove producevo musica elettronica con campionatori e sintetizzatori."
+        ]
+      }
+    ]
+  },
   "experience": {
     "title": "Esperienza",
     "content": [
       {
         "date": "Gen 2024 – Presente",
-        "title": "Senior Frontend Architect / Technical Lead, Adesso S.p.A.",
+        "title": "Senior Frontend Architect / AI Specialist, Adesso S.p.A.",
         "description": "⦿ Introdotta architettura micro-frontend (Piral.js) che ha abilitato rilasci indipendenti per team multipli, riducendo il coupling e accelerando la delivery su progetti enterprise.<br>⦿ Progettato workspace di stima AI-assisted (Claude API + PERT) che ha standardizzato il processo di estimation del team.<br>⦿ Mentoring sviluppatori junior/mid con crescita autonomia in delivery.<br>⦿ Introdotto testing E2E con Playwright portando copertura da zero su flussi critici.<br>⦿ CI/CD e Kubernetes configurati per garantire deploy affidabili e rollback controllati."
       },
       {

@@ -13,14 +13,16 @@ export type PortfolioProject = Pick<
 };
 
 export function normalizeProject(project: ProjectContent): PortfolioProject {
+  const { imageUrl, href, gallery, stack, outcome, featured, source, ...required } = project;
+
   return {
-    ...project,
-    imageUrl: project.imageUrl || undefined,
-    href: project.href && project.href !== "#" ? project.href : undefined,
-    gallery: project.gallery ?? [],
-    stack: project.stack ?? [],
-    outcome: project.outcome || undefined,
-    featured: project.featured === true,
+    ...required,
+    gallery: gallery ?? [],
+    stack: stack ?? [],
+    ...(imageUrl ? { imageUrl } : {}),
+    ...(href && href !== "#" ? { href } : {}),
+    ...(outcome ? { outcome } : {}),
+    ...(featured === true ? { featured: true } : {}),
   };
 }
 

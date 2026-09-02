@@ -30,7 +30,7 @@ const ThemeToggler: FunctionComponent = (): ReactElement | null => {
         }
     };
 
-    const handleClick = () => setTheme(nextTheme());
+    const handleClick = () => setTheme(theme === ThemesEnum.LIGHT ? ThemesEnum.DARK : nextTheme());
 
     const renderIcon = (): string => {
         switch (theme) {
@@ -52,7 +52,7 @@ const ThemeToggler: FunctionComponent = (): ReactElement | null => {
         type="button"
         onClick={handleClick}
         aria-label={t('theme.next', { theme: t(`theme.${nextTheme()}`) })}
-        className="flex h-10 w-10 items-center justify-center rounded-lg text-[var(--ink)] transition-colors hover:bg-[var(--surface-raised)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
+        className="flex h-9 w-9 items-center justify-center border border-[var(--line)] bg-[var(--surface-raised)] text-[var(--ink)] transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
     >
         <Icon icon={renderIcon()} />
     </button>

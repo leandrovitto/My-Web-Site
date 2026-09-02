@@ -1,133 +1,62 @@
-import Icon from '@/components/atoms/icon/Icon';
-import useMenuHook from '@/hooks/MenuHook';
-import { Routes } from '@/routes';
-import { Popover, Transition } from '@headlessui/react';
-import useTranslation from 'next-translate/useTranslation';
-import Image from 'next/image';
-import Link from 'next/link';
-import { Fragment, FunctionComponent, ReactElement } from 'react';
-import CvDownload from '@/components/portfolio/CvDownload';
-import ChangeLanguage from './ChangeLanguage';
-import ThemeToggler from './ThemeToggler';
+import CvDownload from "@/components/portfolio/CvDownload";
+import { Routes } from "@/routes";
+import useTranslation from "next-translate/useTranslation";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { ReactElement, useState } from "react";
+import ChangeLanguage from "./ChangeLanguage";
+import ThemeToggler from "./ThemeToggler";
 
+type NavigationItem = { href: Routes; label: string; code: string };
 
+export function Navbar(): ReactElement {
+  const { t } = useTranslation("common");
+  const { pathname } = useRouter();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const navigation: NavigationItem[] = [
+    { href: Routes.work, label: t("menu.work"), code: "01" },
+    { href: Routes.profile, label: t("menu.profile"), code: "02" },
+  ];
 
+  return (
+    <nav data-cy="main-nav" aria-label={t("navigation.primary")} className="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10">
+      <div className="flex min-h-16 items-center justify-between gap-3">
+        <Link href={Routes.home} aria-label={t("navigation.logo")} className="group flex shrink-0 items-center gap-3 font-mono focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)]">
+          <span className="grid size-8 place-items-center border border-[var(--ink)] text-xs font-bold tracking-[-0.12em] transition-colors group-hover:border-[var(--accent)] group-hover:bg-[var(--accent)] group-hover:text-white">LV</span>
+          <span className="hidden text-sm font-semibold tracking-[-0.04em] sm:block">LEANDRO VITTO</span>
+        </Link>
 
-
-type NavbarProps = {}
-
-
-const Logo = () => {
-    const { t } = useTranslation('common')
-
-    return <Link href={Routes.home}>
-        <div className='flex flex-row gap-2 items-center'>
-            <span className="sr-only">{t('navigation.logo')}</span>
-            <Image
-                className="h-16 w-auto sm:h-10 "
-                src="/images/logo.png"
-                alt=""
-                width={"100"}
-                height={"100"}
-            />
-            <div>
-                <p>{t("profile.name")}</p>
-                <p className='text-xs text-gray-600 dark:text-gray-400'>({t("personal_site")})</p>
-            </div>
+        <div className="hidden items-center gap-1 md:flex">
+          {navigation.map((item) => {
+            const active = pathname === item.href;
+            return <Link key={item.href} href={item.href} aria-current={active ? "page" : undefined} className={`inline-flex items-center gap-2 border-b-2 px-3 py-5 font-mono text-xs font-semibold uppercase tracking-[0.1em] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[var(--accent)] ${active ? "border-[var(--accent)] text-[var(--accent)]" : "border-transparent text-[var(--muted)] hover:border-[var(--line)] hover:text-[var(--ink)]"}`}>
+              <span className="text-[10px] opacity-70">{item.code}</span>{item.label}
+            </Link>;
+          })}
         </div>
-    </Link>
-}
 
-const MenuMobile = () => {
-    const { t } = useTranslation('common')
-    const [menu] = useMenuHook();
+        <div className="hidden items-center gap-2 md:flex">
+          <ThemeToggler />
+          <ChangeLanguage />
+          <CvDownload className="!rounded-none !px-2.5 !py-2 !text-[11px]" />
+        </div>
 
-    return <Transition
-        as={Fragment}
-        enter="duration-200 ease-out"
-        enterFrom="opacity-0 scale-95"
-        enterTo="opacity-100 scale-100"
-        leave="duration-100 ease-in"
-        leaveFrom="opacity-100 scale-100"
-        leaveTo="opacity-0 scale-95"
-    >
-        <Popover.Panel focus className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden">
-            <div className="divide-y-2 divide-gray-50 rounded-lg bg-white dark:bg-gray-900 shadow-lg ring-1 ring-black ring-opacity-5">
-                <div className="px-5 pt-5 pb-6">
-                    <div className="flex  items-center justify-between">
-                        <Logo />
-                        <div className="-mr-2">
-                            <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white dark:bg-gray-800 p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                                <span className="sr-only">{t('navigation.close_menu')}</span>
-                                <Icon icon="close" withoutStyle />
-                            </Popover.Button>
-                        </div>
-                    </div>
-                    <div className="mt-6">
-                        <div className="grid grid-cols-2 gap-y-8">
-                            {menu.map((item, idx) => (
-                                <Link
-                                    key={idx}
-                                    href={item.href}
-                                    target={item.external ? "__blank" : "_self"}
-                                    className="-m-3 flex items-center rounded-md p-3  hover:bg-gray-50 dark:hover:bg-gray-800"
-                                >
-                                    <Icon size={6} className="text-indigo-600 dark:text-indigo-100" icon={item.icon} withoutStyle />
-                                    <span className="ml-3 text-base font-medium text-gray-900 dark:text-gray-100">{item.name}</span>
-                                </Link>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-                <div className="flex items-center justify-end md:flex md:flex-1 lg:w-0 gap-2 py-4 px-4">
-                    <ThemeToggler />
-                    <ChangeLanguage />
-                    <CvDownload />
-                </div>
-            </div>
-        </Popover.Panel>
-    </Transition>
-}
+        <button type="button" aria-expanded={menuOpen} aria-controls="mobile-navigation" onClick={() => setMenuOpen((open) => !open)} className="grid size-9 place-items-center border border-[var(--line)] font-mono text-[11px] font-semibold md:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]">
+          <span className="sr-only">{menuOpen ? t("navigation.close_menu") : t("navigation.open_menu")}</span>
+          {menuOpen ? "CLOSE" : "MENU"}
+        </button>
+      </div>
 
-export const Navbar: FunctionComponent<NavbarProps> = ({ }: NavbarProps): ReactElement => {
-    const { t } = useTranslation('common')
-    const [menu] = useMenuHook();
-
-    return <nav data-cy="main-nav" aria-label={t('navigation.primary')}>
-        <Popover>
-            <div className=''>
-                <div className="flex items-center justify-between border-gray-100 py-2 md:justify-start md:space-x-10 px-4 max-w-7xl mx-auto ">
-                    <div className="flex gap-2 justify-start lg:w-0 lg:flex-1 items-center">
-                        <Logo />
-                    </div>
-                    <div className="-my-2 -mr-2 md:hidden">
-                        <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white dark:bg-gray-800 p-2 text-gray-400 dark:text-gray-100 hover:bg-gray-100 hover:text-gray-500 focus:outline-none border border-gray-300">
-                            <span className="sr-only">{t('navigation.open_menu')}</span>
-                            <Icon icon="menu" withoutStyle />
-                        </Popover.Button>
-                    </div>
-                    <div className="hidden space-x-10 md:flex">
-                        {menu.map((item, idx) => (
-                            <Link
-                                id={`menu_item_${idx}`}
-                                key={idx}
-                                href={item.href}
-                                target={item.external ? "__blank" : "_self"}
-                                className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50 dark:hover:bg-gray-800"
-                            >
-                                <Icon size={6} className="text-indigo-600 dark:text-indigo-100" icon={item.icon} withoutStyle />
-                                <span className="ml-3 text-base font-medium text-gray-900 dark:text-gray-100">{item.name}</span>
-                            </Link>
-                        ))}
-                    </div>
-                    <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0 gap-2">
-                        <ThemeToggler />
-                        <ChangeLanguage />
-                        <CvDownload />
-                    </div>
-                </div>
-                <MenuMobile />
-            </div>
-        </Popover>
+      {menuOpen && <div id="mobile-navigation" className="border-t border-[var(--line)] py-4 md:hidden">
+        <div className="grid gap-1">
+          {navigation.map((item) => <Link key={item.href} href={item.href} onClick={() => setMenuOpen(false)} className="flex items-center justify-between border border-transparent px-3 py-3 font-mono text-sm font-semibold text-[var(--ink)] hover:border-[var(--line)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--accent)]"><span>{item.label}</span><span className="text-xs text-[var(--muted)]">{item.code}</span></Link>)}
+        </div>
+        <div className="mt-4 flex items-center gap-2 border-t border-[var(--line)] pt-4">
+          <ThemeToggler />
+          <ChangeLanguage />
+          <CvDownload className="!ml-auto !rounded-none !px-2.5 !py-2 !text-[11px]" />
+        </div>
+      </div>}
     </nav>
+  );
 }

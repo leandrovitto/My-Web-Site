@@ -1,11 +1,64 @@
 {
-  "title": "About",
+  "title": "Profile",
+  "hero": {
+    "eyebrow": "Profile / career",
+    "description": "Hands-on senior engineer experienced in building frontend systems, digital products, and more autonomous teams.",
+    "image_alt": "Portrait of Leandro Vitto"
+  },
+  "timeline": { "eyebrow": "Professional experience" },
+  "introduction": {
+    "eyebrow": "In brief",
+    "paragraphs": [
+      "Hello, I am Leandro. A Senior Software Engineer with more than 10 years of experience on B2B and B2C enterprise projects.",
+      "I design scalable frontend architecture, from Piral.js micro-frontends to Turborepo monorepos and modular design systems, backed by strong fullstack experience with Node.js, Fastify, and PostgreSQL.",
+      "At Adesso S.p.A., I work on micro-frontend architecture and support engineering teams on complex enterprise projects, with a focus on delivery, quality, and mentoring.",
+      "I founded SmartplateMenu, a live multi-tenant SaaS for restaurants, built with Turborepo, Next.js App Router, Fastify, and AI integrations based on n8n and the Claude API.",
+      "I integrate AI and LLM systems into production: custom MCP servers, agentic workflows, LangGraph.js, and Vercel AI SDK. Through Codewave.dev, I share technical education and practical content with a developer community."
+    ]
+  },
+  "capabilities": { "eyebrow": "Capabilities by product value" },
+  "codewave": {
+    "eyebrow": "Personal brand / education",
+    "title": "Codewave.dev: practical education for people building software.",
+    "description": "Through Codewave.dev I share learning paths, content, and resources about web development and software careers. It is an education project grounded in daily practice on real products and systems.",
+    "action": "Visit codewave.dev",
+    "action_aria": "Visit codewave.dev, external site"
+  },
+  "personal": {
+    "title": "Beyond work",
+    "items": [
+      {
+        "title": "Trading",
+        "subtitle": "Biography / markets",
+        "paragraphs": [
+          "In business, the best things to do are simple, but they are always very difficult to do. [W. Buffett]",
+          "I enjoy the Forex market. I study technical and fundamental analysis, focusing on EUR/USD, USD/JPY, GBP/USD, GER30, and Dow30.",
+          "I work with MetaTrader 4 and TradingView. Books I value include The Trader's Mind and Forex Trading Operations."
+        ]
+      },
+      {
+        "title": "Hobbies and sport",
+        "subtitle": "Biography / movement",
+        "paragraphs": [
+          "Run for life: I enjoy running on gravel and asphalt, and train four or five days a week.",
+          "I have practised martial arts, especially judo and karate. Today, I mainly train through CrossFit, alongside running and strength work."
+        ]
+      },
+      {
+        "title": "Music",
+        "subtitle": "Biography / sound",
+        "paragraphs": [
+          "For ten years, I worked as a sound engineer and DJ. I had a small studio where I produced electronic music with samplers and synthesizers."
+        ]
+      }
+    ]
+  },
   "experience": {
     "title": "Experience",
     "content": [
       {
         "date": "Jan 2024 – Present",
-        "title": "Senior Frontend Architect / Technical Lead, Adesso S.p.A.",
+        "title": "Senior Frontend Architect / AI Specialist, Adesso S.p.A.",
         "description": "⦿ Introduced micro-frontend architecture (Piral.js) enabling independent releases for multiple teams, reducing coupling and accelerating delivery on enterprise projects.<br>⦿ Designed an AI-assisted estimation workspace (Claude API + PERT) that standardized the team's estimation process.<br>⦿ Mentored junior/mid developers, improving their autonomy in delivery.<br>⦿ Introduced E2E testing with Playwright, bringing coverage from zero on critical flows.<br>⦿ Configured CI/CD and Kubernetes to ensure reliable deployments and controlled rollbacks."
       },
       {

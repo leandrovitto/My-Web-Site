@@ -12,6 +12,7 @@ module.exports =
               domains: [
                 'images.unsplash.com',
                 'tailwindui.com',
+                'cdn.codewave.dev',
               ],
             },
         })

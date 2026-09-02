@@ -1,5 +1,20 @@
 {
-    "title": "Portfolio",
+    "title": "Work",
+    "eyebrow": "Portfolio / evidence",
+    "description": "Products and platforms where frontend architecture, delivery, and collaboration shaped the decisions.",
+    "filters": { "all": "All" },
+    "groups": {
+        "products": {
+            "eyebrow": "02 / digital products",
+            "title": "SaaS, platforms, and live products",
+            "description": "Products built for real users: technical strategy, experience, operations, and long-term maintenance."
+        },
+        "code": {
+            "eyebrow": "01 / open code",
+            "title": "Repositories and technical experiments",
+            "description": "Proofs of concept, libraries, and GitHub-shared explorations of ideas, patterns, and tools."
+        }
+    },
     "projects" : {
         "title" : "Projects",
         "description" : "My Side projects are..."

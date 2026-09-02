@@ -1,62 +1,46 @@
+import CvDownload from "@/components/portfolio/CvDownload";
+import { Routes } from "@/routes";
+import useTranslation from "next-translate/useTranslation";
+import Link from "next/link";
+import { ReactElement } from "react";
+import SocialBar from "./SocialBar";
 
-import useTranslation from 'next-translate/useTranslation';
-import Image from 'next/image';
-import { FunctionComponent, ReactElement } from 'react';
-import SocialBar from './SocialBar';
-import useMenuHook from '@/hooks/MenuHook';
-import Link from 'next/link';
+export default function Footer(): ReactElement {
+  const { t } = useTranslation("common");
+  const navigation = [
+    { href: Routes.work, label: t("menu.work"), code: "01" },
+    { href: Routes.profile, label: t("menu.profile"), code: "02" },
+  ];
 
-const Footer: FunctionComponent = (): ReactElement => {
-    const { t } = useTranslation('common')
-    const [menu] = useMenuHook();
-
-    return <footer className="" aria-labelledby="footer-heading">
-        <h2 id="footer-heading" className="sr-only">
-            Footer
-        </h2>
-        <div className="px-10 my-4">
-            <div className="border-t border-gray-900/10 dark:border-gray-100/10">
-            </div>
+  return (
+    <footer aria-labelledby="footer-heading" className="border-t border-[var(--line)] bg-[var(--surface-raised)]">
+      <h2 id="footer-heading" className="sr-only">Footer</h2>
+      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-12 sm:px-8 lg:grid-cols-[1.4fr_0.6fr] lg:px-10">
+        <section>
+          <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">Leandro Vitto / Software systems</p>
+          <p className="mt-4 max-w-xl font-mono text-xl font-semibold leading-8 tracking-[-0.03em] text-[var(--ink)]">{t("footer.message")}</p>
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <CvDownload className="!rounded-none !px-3 !py-2.5 !text-xs" />
+            <SocialBar />
+          </div>
+        </section>
+        <section className="border-l border-[var(--line)] pl-6">
+          <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-[var(--muted)]">Navigation</p>
+          <ul className="mt-4 list-none !ml-0">
+            {navigation.map((item) => <li key={item.href} className="border-t border-[var(--line)] last:border-b">
+              <Link href={item.href} className="flex items-center justify-between py-3 font-mono text-sm font-semibold text-[var(--ink)] transition-colors hover:text-[var(--accent)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)]">
+                {item.label}<span className="text-xs text-[var(--muted)]">{item.code}</span>
+              </Link>
+            </li>)}
+          </ul>
+        </section>
+      </div>
+      <div className="border-t border-[var(--line)]">
+        <div className="mx-auto flex max-w-6xl flex-wrap justify-between gap-2 px-5 py-4 font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--muted)] sm:px-8 lg:px-10">
+          <span>&copy; {new Date().getFullYear()} Leandro Vitto</span>
+          <span>{t("footer.rights")}</span>
         </div>
-        <div className='flex flex-row max-w-7xl  mx-auto'>
-            <div className='w-4/6 p-8'>
-                <div className="flex flex-col justify-start">
-                    <Image
-                        className="h-10 w-10 mb-2"
-                        src="/images/logo.png"
-                        alt="Leandro"
-                        width={50}
-                        height={50}
-                    />
-                    <p className="text-base mb-2 text-gray-600 dark:text-gray-100">
-                        {t("footer.message")}
-                    </p>
-                    <SocialBar />
-                </div>
-            </div>
-            <div className='w-2/6  p-8'>
-                <ul role="list" className="mt-6 space-y-4 list-none">
-                    {menu.map((item) => (
-                        <li key={item.name}>
-                            <Link href={item.href} target={item.external ? "__blank" : "_self"} className="text-sm font-bold leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-100 hover:dark:text-gray-400">
-                                {item.name}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        </div>
-        <div className="px-10 my-4">
-            <div className="border-t border-gray-900/10 dark:border-gray-100/10">
-                <p className="text-center font-bold text-xs leading-5 text-gray-500 dark:text-gray-300 py-4">
-                    &copy; {t("footer.rights")}
-                    <br></br>
-                    {t("footer.love")}
-                </p>
-            </div>
-        </div>
-
+      </div>
     </footer>
+  );
 }
-
-export default Footer;
