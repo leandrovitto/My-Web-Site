@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ReactElement } from "react";
 import { PortfolioProject } from "@/lib/portfolio";
+import { motion, useReducedMotion } from "framer-motion";
 
 type CaseStudyCardProps = {
   project: PortfolioProject;
@@ -8,8 +9,9 @@ type CaseStudyCardProps = {
 };
 
 export default function CaseStudyCard({ project, priority = false }: CaseStudyCardProps): ReactElement {
+  const reduceMotion = useReducedMotion();
   return (
-    <article data-cy="case-study" className="flex h-full flex-col border border-[var(--line)] bg-[var(--surface-raised)]">
+    <motion.article data-cy="case-study" whileHover={reduceMotion ? undefined : { y: -4 }} transition={{ duration: 0.2, ease: "easeOut" }} className="flex h-full flex-col border border-[var(--line)] bg-[var(--surface-raised)]">
       {project.imageUrl && (
         <div className="relative aspect-[16/9] border-b border-[var(--line)]">
           <Image src={project.imageUrl} alt="" fill priority={priority} sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
@@ -34,6 +36,6 @@ export default function CaseStudyCard({ project, priority = false }: CaseStudyCa
           </a>
         )}
       </div>
-    </article>
+    </motion.article>
   );
 }

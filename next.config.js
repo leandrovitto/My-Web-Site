@@ -9,10 +9,10 @@ module.exports =
         nextTranslate({
             reactStrictMode: true,
             images: {
-              domains: [
-                'images.unsplash.com',
-                'tailwindui.com',
-                'cdn.codewave.dev',
+              remotePatterns: [
+                { protocol: 'https', hostname: 'images.unsplash.com' },
+                { protocol: 'https', hostname: 'tailwindui.com' },
+                { protocol: 'https', hostname: 'cdn.codewave.dev' },
               ],
             },
         })
